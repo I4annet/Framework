@@ -1,38 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Langkah 1 : Pengecekan Lingkungan
+---
+<li> node -v & npm -v</li>
+<img src="gambar/npm-node.png" height="150" width="10000">
+<li> git -v </li>
+<img src="gambar/git-v.png" height="150" width="10000">
 
-## Getting Started
+Langkah 2 – Membuat Project Next.js
+---
+<li> Buat direktori baru dan masuk ke direktori kerja </li>
+<li>  Jalankan perintah </li>
+<img src="gambar/jalankan1.png" height="700" width="10000">
+<li>Masuk ke folder projectnya </li>
+<img src="gambar/buat-direktori.png" height="150" width="10000">
 
-First, run the development server:
+Langkah 3 – Menjalankan Server Development
+---
+<li> Masuk ke folder project: </li>
+<li> Jalankan aplikasi: <b> npm run dev </b>
+<li> Buka browser dan akses: http://localhost:3000
+<img src="gambar/jalankan2.png" height="300" width="10000">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Langkah 4 – Mengenal Struktur Folder
+---
+
+Langkah 5 – Modifikasi Halaman Utama
+---
+<li> Ubah isi halaman pages/index.tsx 
+
+```java
+import Head from 'next/head'
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
+
+const inter = Inter({ subsets: ['latin'] })
+export default function Home() {
+  return (
+    <div>
+       <h1>Praktikum Next.js Pages Router</h1> <br />
+          <p>Mahasiswa D4 Pengembangan Web</p>
+    </div>
 ```
+<li> Jalankan di browser
+<img src="gambar/jalankan3.png" height="200" width="10000">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Langkah 6 - Modifikasi API
+---
+<li> Modifikasi hello.ts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```ts
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+type Data = {
+  name: string
+  alamat: string
+}
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  res.status(200).json({ name: 'John Doe', alamat: 'jl.suka suka no 1' })
+}
+```
+<li> Jalankan browser dengan Alamat http://localhost:3000/api/hello
+<img src="gambar/jalankan5.png" height="150" width="1000">
 
-## Learn More
+<li> Tambahkan extensions chrome
+<img src="gambar/json-fornat.png" height="200" width="10000">
+<li> Jalankan browser
+<img src="gambar/jalankan4.png" height="200" width="10000">
 
-To learn more about Next.js, take a look at the following resources:
+Langkah 7 - Modifikasi Background
+---
+<li> Modifikasi _app.tsx
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```java
+import '@/styles/globals.css'
+import type { AppProps } from 'next/app'
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
+```
+<li> Jalankan :
+<img src="gambar/jalankan6.png" height="200" width="10000">
 
-## Deploy on Vercel
+**TUGAS PRAKTIKUM**
+---
+<h3> Tugas 1 (Wajib) </h3>
+Buat halaman baru about.js di folder pages dan tampilkan:
+<li> Nama Mahasiswa
+<li> NIM
+<li> Program Studi</li>
+<img src="gambar/gambar2.png" height="150" width="10000">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<h3> Tugas 2 (Pengayaan) </h3>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Tambahkan minimal 1 link navigasi dari halaman utama ke halaman about.
+<img src="gambar/gambar1.png" height="150" width="10000">
+
+**Pertanyaan Refleksi**
+---
+1. Mengapa Pages Router disebut sebagai routing berbasis file?
+
+Jawaban: Karena URL otomatis dibuat berdasarkan nama file di folder pages/. Jadi setiap file langsung menjadi route tanpa konfigurasi manual
+
+2. Apa perbedaan Next.js dengan React standar (CRA)?
+
+Jawaban: Next.js memiliki routing secara otomatis, bisa SSR/SSG, dan lebih SEO-friendly. Sedangkan CRA hanya SPA biasa dan perlu tambahan library untuk routing
+
+3. Apa fungsi perintah npm run dev?
+
+Jawaban: Untuk menjalankan project dalam mode development (coding) dengan hot reload di localhost
+
+4. Apa perbedaan npm run dev dan run build ?
+
+Jawaban: npm run dev untuk development atau menjalankan project sedangkan npm run build untuk membuat versi production yang sudah dioptimasi
