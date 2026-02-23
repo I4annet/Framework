@@ -28,3 +28,15 @@ dipindah ke folder user dan rubah file user.tsx menjadi index.tsx </li>
 <li><h3> Nested Lebih Dalam </li>
 
 ![image](/pertemuan-2/images/gambar11.png)
+
+Langkah 4 - Dynamic Routing 
+---
+
+<h3><b> a. Buat Halaman Produk </h3>
+
+![image](/pertemuan-2/images/gambar12.png)
+
+<h3> Hasil: </h3>
+
+![image](/pertemuan-2/images/gambar14.png)
+![image](/pertemuan-2/images/gambar13.png)
