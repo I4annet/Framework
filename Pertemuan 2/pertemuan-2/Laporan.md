@@ -1,3 +1,7 @@
+# Jobsheet 3 - Page Dan Layout
+
+###  Langkah Praktikum
+
 Langkah 1 - Routing Dasar (Static Routing)
 ---
 ![image](/pertemuan-2/images/gambar1.png)
@@ -79,3 +83,52 @@ Langkah 7 -  Implementasi Layout di _app.tsx
 <h3> Hasil: </h3>
 
 ![image](/pertemuan-2/images/gambar23.png)
+
+### Tugas Praktikum
+
+Tugas 1
+---
+
+1. Buat halaman:
+
+o /profile
+
+o /profile/edit
+
+2. Pastikan routing berjalan tanpa error
+<h3> Hasil: </h3>
+
+![image](/pertemuan-2/images/gambar24.png)
+
+Tugas 2
+---
+
+1. Buat routing:
+2. /blog/[slug]
+3. Tampilkan nilai slug di halaman
+
+![image](/pertemuan-2/images/gambar25.png)
+
+Tugas 3 – Layout
+---
+1. Tambahkan Footer pada AppShell
+2. Footer tampil di semua halaman
+
+<h3> Hasil : </h3>
+
+![image](/pertemuan-2/images/gambar26.png)
+
+
+### Pertanyaan Refleksi 
+
+1. Apa perbedaan routing berbasis file dan routing manual?
+
+Jawaban : Routing berbasis file otomatis membuat rute berdasarkan struktur folder, sedangkan routing manual mengharuskan developer mendefinisikan rute secara eksplisit
+
+2. Mengapa dynamic routing penting dalam aplikasi web?
+
+Jawaban : karena memungkinkan satu template halaman menangani banyak data berbeda berdasarkan parameter URL
+
+3. Apa keuntungan menggunakan layout global dibanding memanggil komponen satu per satu?
+
+Jawaban : Karena struktur seperti header dan footer dapat digunakan ulang di semua halaman tanpa duplikasi kode.
