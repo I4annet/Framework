@@ -40,3 +40,26 @@ Langkah 4 - Dynamic Routing
 
 ![image](/pertemuan-2/images/gambar14.png)
 ![image](/pertemuan-2/images/gambar13.png)
+
+Langkah 5 - Membuat Komponen Navbar 
+---
+
+<li><h3> Modifikasi index.tsx pada Navbar </li>
+
+![image](/pertemuan-2/images/gambar16.png)
+
+<li><h3> Modifikasi global.css </li>
+
+![image](/pertemuan-2/images/gambar19.png)
+
+<li><h3> Modifikasi index.ts pada folder pages </li>
+
+![image](/pertemuan-2/images/gambar17.png)
+
+<li><h3> Modifikasi _app.tsx ( pastikan import styles dalam keadaan aktif) </li>
+
+![image](/pertemuan-2/images/gambar18.png)
+
+<H3> Hasil: </h3>
+
+![image](/pertemuan-2/images/gambar20.png)
