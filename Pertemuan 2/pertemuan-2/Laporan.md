@@ -63,3 +63,19 @@ Langkah 5 - Membuat Komponen Navbar
 <H3> Hasil: </h3>
 
 ![image](/pertemuan-2/images/gambar20.png)
+
+Langkah 6 - Membuat Layout Global (App Shell)
+---
+
+<li><h3> Modifikasi index.tsx pad AppShell </li>
+
+![image](/pertemuan-2/images/gambar21.png)
+
+Langkah 7 -  Implementasi Layout di _app.tsx
+---
+
+![image](/pertemuan-2/images/gambar22.png)
+
+<h3> Hasil: </h3>
+
+![image](/pertemuan-2/images/gambar23.png)
