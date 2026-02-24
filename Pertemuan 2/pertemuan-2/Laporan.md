@@ -4,7 +4,7 @@
 
 Langkah 1 - Routing Dasar (Static Routing)
 ---
-![images](/pertemuan-2/images/gambar1.png)
+![images](../pertemuan-2/images/gambar1.png)
 
 Langkah 2 - Routing Menggunakan Folder
 ---
