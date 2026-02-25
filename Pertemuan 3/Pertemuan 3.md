@@ -4,7 +4,7 @@
 
 Langkah 1 - Membuat Catch-All Route
 ---
-![images](/images/gambar2.png)
+![images](images/gambar2.png)
 
 Langkah 2 - Pengujian Catch-All Route
 ---
@@ -24,25 +24,25 @@ Langkah 2 - Pengujian Catch-All Route
 Langkah 3 - Optional Catch-All Route
 ---
 
-![images](/images/gambar6.png)
+![images](images/gambar6.png)
 
-![images](/images/gambar7.png)
+![images](images/gambar7.png)
 
 Langkah 4 - Validasi Parameter
 ---
 
-![image](/images/gambar8.png)
+![image](images/gambar8.png)
 
 
 Langkah 5 - Membuat Halaman Login & Register
 ---
 
-![image](/images/kode1.png)
+![image](images/kode1.png)
 
 Langkah 6 -  Navigasi Imperatif (router.push)
 ---
 
-![image](/images/gambar9.png)
+![image](images/gambar9.png)
 
 ### Tugas Praktikum
 
@@ -53,7 +53,7 @@ Tugas 1 (Wajib)
 2. /category/[...slug].js 
 3.  Tampilkan seluruh parameter URL dalam bentuk list.
 
-![image](/images/gambar10.png)
+![image](images/gambar10.png)
 
 Tugas 2 (Wajib)
 ---
@@ -64,17 +64,17 @@ o Login → Product (imperatif)
 
 o Login ↔ Register (Link)
 
-![image](/images/gambbar11.gif)
+![image](images/gambbar11.gif)
 
 Tugas 3 (Pengayaan)
 ---
 1. Terapkan redirect otomatis ke login jika user belum login.
 
-![image](/images/gambar13.png)
+![image](images/gambar13.png)
 
 <h3> Hasil : </h3>
 
-![image](/images/gambar12.gif)
+![image](images/gambar12.gif)
 
 
 ### Pertanyaan Refleksi 
