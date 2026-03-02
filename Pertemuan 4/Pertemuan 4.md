@@ -58,7 +58,9 @@ Langkah 5 - Refactoring Struktur Project (Best Practice)
 Langkah 6 - Inline Styling (CSS-in-JS)
 ---
 
-![image](/images/gambar9.png)
+![image](/images/kode11.png)
+
+![image](/images/gambar6.png)
 
 
 Langkah 7 - Kombinasi Global CSS + CSS Module 
