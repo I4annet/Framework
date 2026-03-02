@@ -73,6 +73,16 @@ Langkah 7 - Kombinasi Global CSS + CSS Module
 Langkahb 8 - SCSS (SASS)
 ---
 
+![image](/images/gambar7.png)
+
+![image](/images/kode15.png)
+
+![image](/images/kode16.png)
+
+![image](/images/kode17.png)
+
+![image](/images/gambar8.png)
+
 Langkah 9 - Tailwind CSS
 ---
 
