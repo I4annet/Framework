@@ -6,15 +6,6 @@ import { useRouter } from 'next/dist/client/components/navigation';
 import { useEffect, useState } from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isLogin, setIsLogin] = useState(false);
-  const { push } = useRouter();
-  useEffect(() => {
-    if (!isLogin) {
-      push("/auth/login");
-    }
-  }
-    , [isLogin, push]);
-    
   return (
       <div>
       <AppShell>
@@ -23,3 +14,12 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
   )
 }
+  // const [isLogin, setIsLogin] = useState(false);
+  // const { push } = useRouter();
+  // useEffect(() => {
+  //   if (!isLogin) {
+  //     push("/auth/login");
+  //   }
+  // }
+  //   , [isLogin, push]);
+    
