@@ -66,6 +66,9 @@ Langkah 6 - Inline Styling (CSS-in-JS)
 Langkah 7 - Kombinasi Global CSS + CSS Module 
 ---
 
+![image](/images/kode12.png)
+
+![image](/images/kode13.png)
 
 Langkahb 8 - SCSS (SASS)
 ---
