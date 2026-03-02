@@ -11,17 +11,21 @@ Langkah 1 - Global CSS
 Langkah 2 - CSS Module (Local Scope)
 ---
 
+![images](images/gambar1.png)
+
 <li>/shop/clothes </li>
 
-![images](images/gambar3.png)
+![images](images/kode3.png)
 
 <li>/shop/clothes/tops </li>
 
-![images](images/gambar4.png)
+![images](images/kode4.png)
 
 <li> /shop/clothes/tops/t-shirt
 
-![images](images/gambar5.png)
+![images](images/kode5.png)
+
+![images](images/gambar2.png)
 
 Langkah 3 - Styling untuk Pages (CSS Module)
 ---
