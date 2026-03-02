@@ -47,7 +47,13 @@ Langkah 4 - Conditional Rendering Navbar (Tanpa Navbar di Login)
 Langkah 5 - Refactoring Struktur Project (Best Practice)
 ---
 
-![image](/images/kode1.png)
+![image](images/gambar5.png)
+
+![image](/images/kode9.png)
+
+![image](/images/kode10.png)
+
+![image](images/gambar4.png)
 
 Langkah 6 - Inline Styling (CSS-in-JS)
 ---
