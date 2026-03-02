@@ -30,14 +30,18 @@ Langkah 2 - CSS Module (Local Scope)
 Langkah 3 - Styling untuk Pages (CSS Module)
 ---
 
-![images](/images/gambar6.png)
+![images](images/kode6.png)
 
-![images](/images/gambar7.png)
+![images](images/kode7.png)
+
+![images](images/gambar3.png)
 
 Langkah 4 - Conditional Rendering Navbar (Tanpa Navbar di Login)
 ---
 
-![image](/images/gambar8.png)
+![images](images/kode8.png)
+
+![image](images/gambar4.png)
 
 
 Langkah 5 - Refactoring Struktur Project (Best Practice)
