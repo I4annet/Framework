@@ -6,11 +6,15 @@ Langkah 1 - Membuat Custom Document
 ---
 ![images](images/gambar1.1.png)
 
+<li><h3> Hasil : </h3></li>
+
 ![images](images/gambar1.2.png)
 
 Langkah 2 - Pengaturan Title per Halaman
 ---
 ![images](images/gambar2.2.png)
+
+<li><h3> Hasil : </h3></li>
 
 ![images](images/gambar2.1.png)
 
@@ -18,8 +22,13 @@ Langkah 3 -– Membuat Custom Error Page (404)
 ---
 <li><h3>Membuat file 404.tsx </h3></li>
 
-![images](../pertemuan-2/images/gambar6.png)
-![images](../pertemuan-2/images/gambar7.png)
+![images](images/gambar3.1.png)
+
+![images](images/gambar3.2.png)
+
+<li><h3> Hasil : </h3></li>
+
+![images](images/gambar3.3.png)
 
 <li><h3> Modifikasi kode user.tsx dan tampilkan hasilnya  </li>
 
