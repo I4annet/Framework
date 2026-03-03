@@ -5,31 +5,39 @@ const TampilanRegister = () => {
     return (
         <div className={styles.register}>
             <div className={styles.container}>
-                <h1>Register</h1>
-                <input 
-                    type="text" 
-                    placeholder="Username" 
-                    className={styles.input}
-                />
-                <input 
-                    type="email" 
-                    placeholder="Email" 
-                    className={styles.input}
-                />
-                <input 
-                    type="password" 
-                    placeholder="Password" 
-                    className={styles.input}
-                />
-                <button className={styles.button}>
-                    Register
-                </button>
-                <p>
-                    <Link href="/auth/login">Ke Halaman Login</Link>
-                </p>
+                <div className={styles.card}>
+                    <h1 className={styles.title}>Register</h1>
+
+                    <form>
+                        <div className={styles.inputGroup}>
+                            <label>Username</label>
+                            <input type="text" placeholder="Masukkan username" />
+                        </div>
+
+                        <div className={styles.inputGroup}>
+                            <label>Email</label>
+                            <input type="email" placeholder="Masukkan email" />
+                        </div>
+
+                        <div className={styles.inputGroup}>
+                            <label>Password</label>
+                            <input type="password" placeholder="Masukkan password" />
+                        </div>
+
+                        <button type="submit" className={styles.button}>
+                            Register
+                        </button>
+                    </form>
+
+                    <div className={styles.link}>
+                        <Link href="/auth/login">
+                            Sudah punya akun? Login
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     );
-}
+};
 
 export default TampilanRegister;
