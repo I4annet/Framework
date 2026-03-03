@@ -10,12 +10,13 @@ Langkah 1 - Membuat Custom Document
 
 Langkah 2 - Pengaturan Title per Halaman
 ---
-![images](../pertemuan-2/images/gambar2.png)
-![images](../pertemuan-2/images/gambar1.png)
+![images](images/gambar2.2.png)
 
-Langkah 3 - Nested Routing
+![images](images/gambar2.1.png)
+
+Langkah 3 -– Membuat Custom Error Page (404)
 ---
-<li><h3> Modifikasi kode app.tsx dan tampilkan hasilnya  </li>
+<li><h3>Membuat file 404.tsx </h3></li>
 
 ![images](../pertemuan-2/images/gambar6.png)
 ![images](../pertemuan-2/images/gambar7.png)
