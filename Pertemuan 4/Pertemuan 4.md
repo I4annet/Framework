@@ -1,4 +1,4 @@
-# Jobsheet 4 
+# Jobsheet 5 - Styling 
 
 ###  Langkah Praktikum
 
@@ -100,6 +100,15 @@ Langkah 9 - Tailwind CSS
 • Buat halaman Register
 
 • Gunakan CSS Module
+
+![image](/images/kode20.png)
+
+![image](/images/kode21.png)
+
+![image](/images/kode22.png)
+
+![image](/images/gambar11.png)
+
 
 #### Tugas 2
 • Refactor halaman Produk ke folder views
