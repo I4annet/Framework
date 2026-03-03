@@ -86,53 +86,35 @@ Langkahb 8 - SCSS (SASS)
 Langkah 9 - Tailwind CSS
 ---
 
-### Tugas Praktikum
+![image](/images/gambar9.png)
 
-Tugas 1 (Wajib)
----
+![image](/images/kode18.png)
 
-1. Buat catch-all route: 
-2. /category/[...slug].js 
-3.  Tampilkan seluruh parameter URL dalam bentuk list.
+![image](/images/kode19.png)
 
 ![image](/images/gambar10.png)
 
-Tugas 2 (Wajib)
----
+### Tugas Praktikum
+#### Tugas 1
 
-1. Buat navigasi: 
+• Buat halaman Register
 
-o Login → Product (imperatif) 
+• Gunakan CSS Module
 
-o Login ↔ Register (Link)
+#### Tugas 2
+• Refactor halaman Produk ke folder views
 
-![image](/images/gambbar11.gif)
+• Pisahkan Hero Section dan Main Section
 
-Tugas 3 (Pengayaan)
----
-1. Terapkan redirect otomatis ke login jika user belum login.
+#### Tugas 3
+• Terapkan Tailwind CSS
 
-![image](/images/gambar13.png)
-
-<h3> Hasil : </h3>
-
-![image](/images/gambar12.gif)
+• Gunakan minimal 5 utility class
 
 
 ### Pertanyaan Refleksi 
 
-1. Apa perbedaan [id].js dan [...slug].js?
-
-Jawaban : [id].js digunakan untuk menangkap satu parameter saja, sedangkan [...slug].js digunakan untuk menangkan banyak URL
-
-2. Mengapa slug berbentuk array?
-
-Jawaban : Karena [...slug] bisa menerima lebih dari satu bagian URL, jadi disimpan dalam bentuk array
-
-3. Kapan sebaiknya menggunakan Link dan router.push()? 
-
-Jawaban : Link digunakan untuk perpindahan navigasi biasa seperti (klik menu/tombol), sedangkan router.push() digunakan untuk navigasi aksin tertentu contohnya (Login)
-
-4. Mengapa navigasi Next.js tidak me-refresh halaman?
-
-Jawaban : Karena Next.js menggunakan client-side navigation, jadi hanya konten yang berubah tanpa reload seluruh halaman
+1. Kapan sebaiknya menggunakan CSS Module dibanding Global CSS?
+2. Apa kelemahan inline styling?
+3. Mengapa SCSS cocok untuk project skala besar?
+4. Apa keunggulan Tailwind dibanding CSS tradisional?
