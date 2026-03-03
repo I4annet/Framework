@@ -133,11 +133,23 @@ Langkah 9 - Tailwind CSS
 
 ![image](images/kode27.png)
 
-![image](/images/gambar13.png)
+![image](images/gambar13.png)
 
 ### Pertanyaan Refleksi 
 
 1. Kapan sebaiknya menggunakan CSS Module dibanding Global CSS?
+
+Jawaban : CSS Module digunakan saat ingin styling khusus untuk satu komponen dan menghindari konflik class sedangkan Global CSS digunakan untuk styling umum yang dipakai di seluruh bagian komponen
+
 2. Apa kelemahan inline styling?
+
+Jawaban : tidak bisa pakai :hover, media query, sulit digunakan ulang, dan kurang cocok untuk project besar.
+
 3. Mengapa SCSS cocok untuk project skala besar?
+
+Jawaban : karena punya fitur seperti variable, nesting, 
+dan mixin yang membuat kode lebih rapi dan mudah dikelola.
+
 4. Apa keunggulan Tailwind dibanding CSS tradisional?
+
+Jawaban : Karena dapat mempercepat development dengan class yang sudah siap dipakai tanpa perlu banyak menulis CSS kustom / buat sendiri
