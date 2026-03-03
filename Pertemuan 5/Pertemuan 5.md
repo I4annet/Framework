@@ -30,34 +30,34 @@ Langkah 3 -– Membuat Custom Error Page (404)
 
 ![images](images/gambar3.3.png)
 
-<li><h3> Modifikasi kode user.tsx dan tampilkan hasilnya  </li>
-
-![images](../pertemuan-2/images/gambar5.png)
-![images](../pertemuan-2/images/gambar8.png)
-
-<li><h3>Modifikasi struktur folder pages dengan menambahkan folder user dan user.tsx pada setting
-dipindah ke folder user dan rubah file user.tsx menjadi index.tsx </li>
-
-![image](../pertemuan-2/images/gambar10.png)
-![image](../pertemuan-2/images/gambar9.png)
-
-<li><h3> Nested Lebih Dalam </li>
-
-![image](../pertemuan-2/images/gambar11.png)
-
-Langkah 4 - Dynamic Routing 
+Langkah 4 - Styling Halaman 404
 ---
 
-<h3><b> a. Buat Halaman Produk </h3>
+<li><h3> Buat file 404.module.scss di folder styles</li>
 
-![image](../pertemuan-2/images/gambar12.png)
+![image](images/gambar4.1.png)
+
+<li><h3> Buat kode 404.module.scss </li>
+
+![image](images/gambar4.2.png)
+
+<li><h3> Modifikasi kode 404.tsx </li>
+
+![image](images/gambar4.3.png)
 
 <h3> Hasil: </h3>
 
-![image](../pertemuan-2/images/gambar14.png)
-![image](../pertemuan-2/images/gambar13.png)
+![image](images/gambar4.4.png)
 
-Langkah 5 - Membuat Komponen Navbar 
+<li><h3> Menghilangkan Navbar </li>
+
+![image](images/gambar4.5.png)
+
+<h3> Hasil: </h3>
+
+![image](images/gambar4.6.png)
+
+Langkah 5 - Menampilkan Gambar dari Folder Public
 ---
 
 <li><h3> Modifikasi index.tsx pada Navbar </li>
