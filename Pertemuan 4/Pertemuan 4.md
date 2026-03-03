@@ -115,6 +115,16 @@ Langkah 9 - Tailwind CSS
 
 • Pisahkan Hero Section dan Main Section
 
+![image](/images/kode23.png)
+
+![image](/images/kode24.png)
+
+![image](/images/kode25.png)
+
+![image](/images/kode26.png)
+
+![image](/images/gambar12.png)
+
 #### Tugas 3
 • Terapkan Tailwind CSS
 
