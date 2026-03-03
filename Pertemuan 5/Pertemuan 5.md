@@ -60,25 +60,22 @@ Langkah 4 - Styling Halaman 404
 Langkah 5 - Menampilkan Gambar dari Folder Public
 ---
 
-<li><h3> Modifikasi index.tsx pada Navbar </li>
+<li><h3> Simpan gambar not-found.png ke folder public/ dan rename agar memudahkan </li>
 
-![image](../pertemuan-2/images/gambar16.png)
+![image](images/gambar5.1.png)
 
-<li><h3> Modifikasi global.css </li>
+<li><h3> Modifikasi kode pada 404.tsx: </li>
 
-![image](../pertemuan-2/images/gambar19.png)
+![image](/images/gambar5.2.png)
+
+<h3> Hasil : </h3>
+
+![image](/images/gambar5.3.png)
 
 <li><h3> Modifikasi index.ts pada folder pages </li>
 
 ![image](../pertemuan-2/images/gambar17.png)
 
-<li><h3> Modifikasi _app.tsx ( pastikan import styles dalam keadaan aktif) </li>
-
-![image](../pertemuan-2/images/gambar18.png)
-
-<H3> Hasil: </h3>
-
-![image](../pertemuan-2/images/gambar20.png)
 
 Langkah 6 - Membuat Layout Global (App Shell)
 ---
