@@ -66,78 +66,40 @@ Langkah 5 - Menampilkan Gambar dari Folder Public
 
 <li><h3> Modifikasi kode pada 404.tsx: </li>
 
-![image](/images/gambar5.2.png)
+![image](images/gambar5.2.png)
 
 <h3> Hasil : </h3>
 
-![image](/images/gambar5.3.png)
+![image](images/gambar5.3.png)
 
-<li><h3> Modifikasi index.ts pada folder pages </li>
-
-![image](../pertemuan-2/images/gambar17.png)
-
-
-Langkah 6 - Membuat Layout Global (App Shell)
----
-
-<li><h3> Modifikasi index.tsx pad AppShell </li>
-
-![image](../pertemuan-2/images/gambar21.png)
-
-Langkah 7 -  Implementasi Layout di _app.tsx
----
-
-![image](../pertemuan-2/images/gambar22.png)
-
-<h3> Hasil: </h3>
-
-![image](../pertemuan-2/images/gambar23.png)
 
 ### Tugas Praktikum
 
-Tugas 1
----
+![image](images/tugas1.1.png)
 
-1. Buat halaman:
-
-o /profile
-
-o /profile/edit
-
-2. Pastikan routing berjalan tanpa error
-<h3> Hasil: </h3>
-
-![image](../pertemuan-2/images/gambar24.png)
-
-Tugas 2
----
-
-1. Buat routing:
-2. /blog/[slug]
-3. Tampilkan nilai slug di halaman
-
-![image](../pertemuan-2/images/gambar25.png)
-
-Tugas 3 – Layout
----
-1. Tambahkan Footer pada AppShell
-2. Footer tampil di semua halaman
+![image](images/tugas1.2.png)
 
 <h3> Hasil : </h3>
 
-![image](../pertemuan-2/images/gambar26.png)
+
+![image](images/tugas1.3.gif)
 
 
 ### Pertanyaan Refleksi 
 
-1. Apa perbedaan routing berbasis file dan routing manual?
+Pertanyaan Evaluasi
+1. Apa fungsi utama _document.js?
 
-Jawaban : Routing berbasis file otomatis membuat rute berdasarkan struktur folder, sedangkan routing manual mengharuskan developer mendefinisikan rute secara eksplisit
+Jawaban : Untuk mengatur dan memodifikasi struktur dasar dokumen HTML aplikasi secara global. File tersebut juga digunakan untuk mengatur elemen < html >, < head >, dan < body > yang membungkus seluruh halaman aplikasi.
 
-2. Mengapa dynamic routing penting dalam aplikasi web?
+2. Mengapa < title> tidak disarankan di _document.js?
 
-Jawaban : karena memungkinkan satu template halaman menangani banyak data berbeda berdasarkan parameter URL
+Jawaban : Karena file tersebut bersifat global dan tidak mendukung perubahan dinamis untuk setiap halaman, jika < title > diletakkan disana maka semua halaman memiliki judul yang sama.
 
-3. Apa keuntungan menggunakan layout global dibanding memanggil komponen satu per satu?
+3. Apa perbedaan halaman biasa dan halaman 404.js?
 
-Jawaban : Karena struktur seperti header dan footer dapat digunakan ulang di semua halaman tanpa duplikasi kode.
+Jawaban : Halaman biasa adalah halaman yang dibuat sesuai dengan sistem routing Next.js dan dapat diakses melalui URL tertentu, seperti /about atau /produk sedangkan halaman 404.js adalah halama khusus yang secara otomatis ditampilkan oleh Next.js ketika akses URL nya tidak tersedia.
+
+4. Mengapa folder public tidak perlu di-import?
+
+Jawaban : Karena folder public merupakan root path nya aplikasi sehingga kita tidak perlu mengimportnya melainkan dengan cara mengakses URL nya.
