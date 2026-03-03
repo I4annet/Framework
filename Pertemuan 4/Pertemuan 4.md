@@ -152,4 +152,4 @@ dan mixin yang membuat kode lebih rapi dan mudah dikelola.
 
 4. Apa keunggulan Tailwind dibanding CSS tradisional?
 
-Jawaban : Karena dapat mempercepat development dengan class yang sudah siap dipakai tanpa perlu banyak menulis CSS kustom / buat sendiri
+Jawaban : Karena Tailwind CSS dapat mempercepat development dengan class yang sudah siap dipakai tanpa perlu banyak menulis CSS kustom / buat sendiri
