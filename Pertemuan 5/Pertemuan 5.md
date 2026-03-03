@@ -1,12 +1,14 @@
-# Jobsheet 4 - Custom Document dan Custom Error Page pada Next.js
+# Jobsheet 6 - Custom Document dan Custom Error Page pada Next.js
 
 ###  Langkah Praktikum
 
-Langkah 1 - Routing Dasar (Static Routing)
+Langkah 1 - Membuat Custom Document
 ---
-![images](../pertemuan-2/images/gambar1.png)
+![images](images/gambar1.1.png)
 
-Langkah 2 - Routing Menggunakan Folder
+![images](images/gambar1.2.png)
+
+Langkah 2 - Pengaturan Title per Halaman
 ---
 ![images](../pertemuan-2/images/gambar2.png)
 ![images](../pertemuan-2/images/gambar1.png)
