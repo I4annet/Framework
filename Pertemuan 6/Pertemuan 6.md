@@ -1,14 +1,21 @@
-# Jobsheet 6 - Custom Document dan Custom Error Page pada Next.js
+# Jobsheet 7 - API Routes
 
 ###  Langkah Praktikum
 
-Langkah 1 - Membuat Custom Document
+Langkah 1 - Membuat API Produk
 ---
-![images](images/gambar1.1.png)
+
+<li><h3> Buat file pad pages/api/produk.js</h3></li>
+
+![images](images/Praktikum1.1.png)
+
+<li><h3> Buat kode statis</h3></li>
+
+![images](images/Praktikum1.2.png)
 
 <li><h3> Hasil : </h3></li>
 
-![images](images/gambar1.2.png)
+![images](images/Hasil1.png)
 
 Langkah 2 - Pengaturan Title per Halaman
 ---
