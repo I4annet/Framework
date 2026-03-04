@@ -92,18 +92,18 @@ Langkah 3 - Setup Firebase
 
 ![images](images/Hasil5.png)
 
-Langkah 4 - Styling Halaman 404
+Langkah 4 - Install Firebase
 ---
 
-<li><h3> Buat file 404.module.scss di folder styles</li>
+<li><h3> Install firebase menggunakan perintah <i>npm install firebase</i></li>
 
-![image](images/gambar4.1.png)
+![image](images/Praktikum4.1.png)
 
-<li><h3> Buat kode 404.module.scss </li>
+<li><h3> Buat folder dan file ts pada pages utlis/db/firebase.ts </li>
 
-![image](images/gambar4.2.png)
+![image](images/Praktikum4.2.png)
 
-<li><h3> Modifikasi kode 404.tsx </li>
+<h4>Lalu copy paste kode yang ada di firebase ke dalam file firebase.ts</h4>
 
 ![image](images/gambar4.3.png)
 
