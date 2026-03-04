@@ -1,31 +1,17 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import TampilanProduk from "../view/produk";
+import useSWR from "swr";
+import fetcher from "../utils/swr/fetcher";
 
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const kategori = () => {
     const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch("/api/produk")
-            .then((response) => response.json())
-            .then(responesedata => {
-                setProducts(responesedata.data);
-            })
-            .catch((error) => {
-              console.error("Error fetching products:", error);
-            });
-    }, []);
-//   const { push } = useRouter();
-//   useEffect(() => {
-//     const loginStatus = localStorage.getItem("isLogin") === "true";
-//     if (!loginStatus) {
-//       push("/auth/login");
-//     }
-//   }, [push]);
-//   return <TampilanProduk />;
+    const { data, error, isLoading } = useSWR("/api/produk", fetcher);
   return (
     <div>
-      <TampilanProduk products={products} />
+      <TampilanProduk products={isLoading ? [] : data.data} />
     </div>
   );
 };
