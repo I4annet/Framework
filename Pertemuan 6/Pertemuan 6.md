@@ -105,30 +105,17 @@ Langkah 4 - Install Firebase
 
 <h4>Lalu copy paste kode yang ada di firebase ke dalam file firebase.ts</h4>
 
-![image](images/gambar4.3.png)
-
-<h3> Hasil: </h3>
-
-![image](images/gambar4.4.png)
-
-<li><h3> Menghilangkan Navbar </li>
-
-![image](images/gambar4.5.png)
-
-<h3> Hasil: </h3>
-
-![image](images/gambar4.6.png)
-
-Langkah 5 - Menampilkan Gambar dari Folder Public
+Langkah 5 - Konfigurasi Environment Variable agar credensial firebase tidak dapat dilihat saat dipush
+di repository
 ---
 
-<li><h3> Simpan gambar not-found.png ke folder public/ dan rename agar memudahkan </li>
+<li><h3> Buat file: .env.local </li>
 
-![image](images/gambar5.1.png)
+![image](images/Praktikum5.1.png)
 
-<li><h3> Modifikasi kode pada 404.tsx: </li>
+<li><h3> Modifikasi kode dan sesuaikan dengan firebase Isikan sesuai dengan yang ada pada ( tanpa koma dan petik dua) </li>
 
-![image](images/gambar5.2.png)
+![image](images/Praktikum5.2.png)
 
 <h3> Hasil : </h3>
 
