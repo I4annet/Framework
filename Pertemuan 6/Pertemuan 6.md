@@ -117,10 +117,12 @@ di repository
 
 ![image](images/Praktikum5.2.png)
 
-<h3> Hasil : </h3>
+Langkah 6 - Konfigurasi Firebase 
+---
 
-![image](images/gambar5.3.png)
+<li><h3> Modifikasi firebase.ts </li>
 
+![image](images/Praktikum6.1.png)
 
 ### Tugas Praktikum
 
