@@ -16,17 +16,30 @@ Langkah 1 - Setup Data Produk
 Langkah 2 - Implementasi CSR dengan useEffect
 ---
 
-<li><h3> Membuat file index.tsx pada folder views/products </h3></li>
+<li><h3> Buka file index.tsx pada folder views/products dan modfikasi kode index.tsx </h3></li>
+
+![images](images/Praktikum2.png)
+
+<li><h3> Modifikasi index.tsx pada pages/produk/ </h3></li>
 
 ![images](images/Praktikum2.1.png)
 
-<li><h3> Modifikasi index.tsx</h3></li>
+<li><h3> Hasil : </h3></li>
 
 ![images](images/Hasil2.png)
 
-<li><h3>Buka file index.tsx pada pages/produk/</h3></li>
+<li><h3>Modifikasi produk.modules.scss/</h3></li>
 
-<li><h3>Modifikasi index.tsx pada pages/produk/</h3></li>
+![images](images/Praktikum2.3.png)
+
+
+<li><h3>Modifikasi Pada file index.tsx pada folder pages/views/product</h3></li>
+
+![images](images/Praktikum2.2.png)
+
+li><h3> Hasil : </h3></li>
+
+![images](images/Hasil3.png)
 
 Langkah 3 - Setup Firebase
 ---

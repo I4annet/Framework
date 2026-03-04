@@ -1,13 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-// import TampilanProduk from "../view/produk";
-
-type ProductType = {
-  id: string;
-  name: string;
-  price: number;
-  size: string;
-}
+import TampilanProduk from "../view/produk";
 
 const kategori = () => {
     const [products, setProducts] = useState([]);
@@ -32,14 +25,7 @@ const kategori = () => {
 //   return <TampilanProduk />;
   return (
     <div>
-      <h1>Daftar Produk</h1>
-      {products.map((product: ProductType) => (
-        <div key={product.id}>
-          <h2>{product.name}</h2>
-          <p>Harga: {product.price}</p>
-          <p>Ukuran: {product.size}</p>
-        </div>
-      ))}
+      <TampilanProduk products={products} />
     </div>
   );
 };
