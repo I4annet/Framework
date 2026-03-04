@@ -4,40 +4,43 @@ type ProductType = {
   id: string;
   name: string;
   price: number;
-  image: string;
   category: string;
+  image: string;
 };
-
-const TampilanProduk = ({ products }: { products: ProductType[] }) => {
+const TampilanProduct = ({ products }: { products: ProductType[] }) => {
   return (
-    <div className={styles.produk}>
-      <h1 className={styles.produk_title}>Daftar Produk</h1>
-      <div className={styles.produk_content}>
-      {/* {products.map((products: ProductType) => (
-        <div key={products.id} className={styles.produk_content_item}>
-          <div className={styles.produk_content_item_image}>
-          <img src={products.image} alt={products.name} width={200} />
-          </div>
-          <h4 className={styles.produk_content_item_name}>
-            {products.name}
-          </h4>
-          <p className={styles.produk_content_item_category}>
-            Kategori: {products.category}
-          </p>
-          <p className={styles.produk_content_item_price}>
-            Rp {products.price.toLocaleString()}
-          </p>
+    <div className={styles.product}>
+      <h1 className={styles.product__title}>Daftar Product</h1>
+
+      {products.length > 0 ? (
+        <div className={styles.product__content}>
+          {products.map((product: ProductType) => (
+            <div key={product.id} className={styles.product__content__item}>
+              <div className={styles.product__content__item__image}>
+                <img src={product.image} alt={product.name} width={200} />
+              </div>
+              <h2 className={styles.product__content__item__name}>
+                {product.name}
+              </h2>
+              <p className={styles.product__content__item__category}>
+                Kategori: {product.category}
+              </p>
+              <p className={styles.product__content__item__price}>
+                Rp {product.price.toLocaleString()}
+              </p>
+            </div>
+          ))}
         </div>
-      ))} */}
-      <div className={styles.produk_content_skeleton}>
-        <div className={styles.produk_content_skeleton_image}></div>
-        <div className={styles.produk_content_skeleton_name}></div>
-        <div className={styles.produk_content_skeleton_category}></div>
-        <div className={styles.produk_content_skeleton_price}></div>
-      </div>
-    </div>
+      ) : (
+        <div className={styles.product__content__skeleton}>
+          <div className={styles.product__content__skeleton__image}></div>
+          <div className={styles.product__content__skeleton__name}></div>
+          <div className={styles.product__content__skeleton__category}></div>
+          <div className={styles.product__content__skeleton__price}></div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default TampilanProduk;
+export default TampilanProduct;

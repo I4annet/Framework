@@ -37,7 +37,7 @@ Langkah 2 - Implementasi CSR dengan useEffect
 
 ![images](images/Praktikum2.2.png)
 
-li><h3> Hasil : </h3></li>
+<li><h3> Hasil : </h3></li>
 
 ![images](images/Hasil3.png)
 
@@ -46,116 +46,48 @@ Langkah 3 - Implementasi Skeleton Loading
 
 <li><h3> Modfikasi file index.tsx pada folder views/product/index.tsx </li>
 
-<li><h3> Hasil : </h3></li>
+![images](images/Praktikum3.1.png)
 
+<li><h3> Modifikasi file product.module.scss </li>
 
-![images](images/Praktikum3.4.png)
+![images](images/Praktikum3.png)
 
-<li><h3> Klik register app </li>
-
-![images](images/Praktikum3.5.png)
-
-<li><h3> Klik continue to console </li>
-
-![images](images/Praktikum3.6.png)
-
-<li><h3> Aktifkan Firestore Database </li>
-
-![images](images/Praktikum3.7.png)
-
-<li><h3> Create Database </li>
-
-![images](images/Praktikum3.8.png)
-
-<li><h3> Pilih Location (Jakarta) </li>
-
-![images](images/Praktikum3.9.png)
-
-<li><h3> Dan klik Create </li>
-
-![images](images/Praktikum3.10.png)
-
-<li><h3> Hasil : </h3></li>
+<li><h3> Hasil Jalankan browser maka akan muncul skeleton yang terdapat animasi berkedip : </h3></li>
 
 ![images](images/Hasil4.png)
 
-<li><h3> Ubah rulesnya menjadi true dan publish </h3></li>
+<li><h3> Modifikasi pada index.tsx pada folder views/product/index.tsx </li>
 
-![images](images/Praktikum3.11.png)
+![images](images/Praktikum3.2.png)
 
-<li><h3> Buat collection (products) </h3></li>
-
-![images](images/Praktikum3.12.png)
-
-<li><h3> Gunakan auto-id dan tambahkan field </h3></li>
-
-![images](images/Praktikum3.13.png)
-
-<li><h3> Hasil Akhir : </h3></li>
+<li><h3> Hasil : </h3></li>
 
 ![images](images/Hasil5.png)
 
-Langkah 4 - Install Firebase
+Langkah 4 - Implementasi SWR
 ---
 
-<li><h3> Install firebase menggunakan perintah <i>npm install firebase</i></li>
+<li><h3> Install SWR menggunakan perintah <i>npm install swr</i></li>
 
 ![image](images/Praktikum4.1.png)
 
-<li><h3> Buat folder dan file ts pada pages utlis/db/firebase.ts </li>
+<li><h3> Buka dan modifkasi file index.tsx pada folder pages/product/ </li>
 
 ![image](images/Praktikum4.2.png)
 
-<h4>Lalu copy paste kode yang ada di firebase ke dalam file firebase.ts</h4>
-
-Langkah 5 - Konfigurasi Environment Variable agar credensial firebase tidak dapat dilihat saat dipush
-di repository
----
-
-<li><h3> Buat file: .env.local </li>
+<li><h3> Buat folder swr pada utils dan tambahkan file dengan nama fetcher.js </li>
 
 ![image](images/Praktikum5.1.png)
 
-<li><h3> Modifikasi kode dan sesuaikan dengan firebase Isikan sesuai dengan yang ada pada ( tanpa koma dan petik dua) </li>
+<li><h3> Modifikasi file fetcher.ts </li>
 
 ![image](images/Praktikum5.2.png)
 
-Langkah 6 - Konfigurasi Firebase 
----
-
-<li><h3> Modifikasi firebase.ts </li>
+<li><h3> Modifikasi file index.tsx pada folder pages/produk </li>
 
 ![image](images/Praktikum6.1.png)
 
-Langkah 7 - Ambil Data dari Firestore
----
 
-<li><h3> Buat file servicefirebase.js </li>
-
-![image](images/Praktikum7.1.png)
-
-<li><h3>modifikasi file servicefirebase.js </li>
-
-![image](images/Praktikum7.2.png)
-
-Langkah 8 - API Mengambil Data Firebase
----
-
-<li><h3> Edit pages/api/produk.js: </li>
-
-![image](images/Praktikum8.1.png)
-
-<li><h3> Hasil : </h3></li>
-
-![image](images/Hasil6.png)
-
-<li><h3> Modifikasi index.ts pada produk sesuaikan nama typenya dan db nya </li>
-
-![image](images/Praktikum8.2.png)
-
-<li><h3> Hasil : </h3></li>
-
-![image](images/Hasil7.png)
 
 
 ### Tugas Praktikum
