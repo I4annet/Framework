@@ -1,40 +1,38 @@
-# Jobsheet 7 - API Routes
+# Jobsheet 8 - Client Side Rendering & Data Fetching
 
 ###  Langkah Praktikum
 
-Langkah 1 - Membuat API Produk
+Langkah 1 - Setup Data Produk
 ---
 
-<li><h3> Buat file pad pages/api/produk.js</h3></li>
+<li><h3> Menambah field yang berisi image address di Firebase </h3></li>
 
-![images](images/Praktikum1.1.png)
+![images](images/Praktikum1.png)
 
-<li><h3> Buat kode statis</h3></li>
-
-![images](images/Praktikum1.2.png)
-
-<li><h3> Hasil : </h3></li>
+<li><h3> Hasil jalankan browser http://localhost:3000/api/produk : </h3></li>
 
 ![images](images/Hasil1.png)
 
-Langkah 2 - Fetch Data API di Frontend
+Langkah 2 - Implementasi CSR dengan useEffect
 ---
 
-<li><h3> Tambahkan useEffect() dan comment useEffect untuk isLogin pada pages/product/index.tsx </h3></li>
+<li><h3> Membuat file index.tsx pada folder views/products </h3></li>
 
 ![images](images/Praktikum2.1.png)
 
-<li><h3> Hasil : </h3></li>
+<li><h3> Modifikasi index.tsx</h3></li>
 
 ![images](images/Hasil2.png)
 
+<li><h3>Buka file index.tsx pada pages/produk/</h3></li>
+
+<li><h3>Modifikasi index.tsx pada pages/produk/</h3></li>
+
 Langkah 3 - Setup Firebase
 ---
-<li><h3>Buka Firebase Go To Console dan buat project </h3></li>
 
 ![images](images/Praktikum3.1.gif)
 
-<li><h3>Buat project baru: Framework-next</h3></li>
 
 ![images](images/Praktikum3.2.png)
 
