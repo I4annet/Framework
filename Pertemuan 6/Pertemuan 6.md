@@ -28,17 +28,69 @@ Langkah 2 - Fetch Data API di Frontend
 
 ![images](images/Hasil2.png)
 
-Langkah 3 -– Setup Firebase
+Langkah 3 - Setup Firebase
 ---
-<li><h3>Membuat file 404.tsx </h3></li>
+<li><h3>Buka Firebase Go To Console dan buat project </h3></li>
 
-![images](images/gambar3.1.png)
+![images](images/Praktikum3.1.gif)
 
-![images](images/gambar3.2.png)
+<li><h3>Buat project baru: Framework-next</h3></li>
+
+![images](images/Praktikum3.2.png)
+
+![images](images/Praktikum3.3.png)
 
 <li><h3> Hasil : </h3></li>
 
-![images](images/gambar3.3.png)
+![images](images/Hasil3.png)
+
+<li><h3> Klik add app dan pilih Web </li>
+
+![images](images/Praktikum3.4.png)
+
+<li><h3> Klik register app </li>
+
+![images](images/Praktikum3.5.png)
+
+<li><h3> Klik continue to console </li>
+
+![images](images/Praktikum3.6.png)
+
+<li><h3> Aktifkan Firestore Database </li>
+
+![images](images/Praktikum3.7.png)
+
+<li><h3> Create Database </li>
+
+![images](images/Praktikum3.8.png)
+
+<li><h3> Pilih Location (Jakarta) </li>
+
+![images](images/Praktikum3.9.png)
+
+<li><h3> Dan klik Create </li>
+
+![images](images/Praktikum3.10.png)
+
+<li><h3> Hasil : </h3></li>
+
+![images](images/Hasil4.png)
+
+<li><h3> Ubah rulesnya menjadi true dan publish </h3></li>
+
+![images](images/Praktikum3.11.png)
+
+<li><h3> Buat collection (products) </h3></li>
+
+![images](images/Praktikum3.12.png)
+
+<li><h3> Gunakan auto-id dan tambahkan field </h3></li>
+
+![images](images/Praktikum3.13.png)
+
+<li><h3> Hasil Akhir : </h3></li>
+
+![images](images/Hasil5.png)
 
 Langkah 4 - Styling Halaman 404
 ---
