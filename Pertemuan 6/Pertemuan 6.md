@@ -17,15 +17,18 @@ Langkah 1 - Membuat API Produk
 
 ![images](images/Hasil1.png)
 
-Langkah 2 - Pengaturan Title per Halaman
+Langkah 2 - Fetch Data API di Frontend
 ---
-![images](images/gambar2.2.png)
+
+<li><h3> Tambahkan useEffect() dan comment useEffect untuk isLogin pada pages/product/index.tsx </h3></li>
+
+![images](images/Praktikum2.1.png)
 
 <li><h3> Hasil : </h3></li>
 
-![images](images/gambar2.1.png)
+![images](images/Hasil2.png)
 
-Langkah 3 -– Membuat Custom Error Page (404)
+Langkah 3 -– Setup Firebase
 ---
 <li><h3>Membuat file 404.tsx </h3></li>
 

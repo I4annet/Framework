@@ -1,18 +1,49 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
-import TampilanProduk from "../view/produk";
+import { useEffect, useState } from "react";
+// import TampilanProduk from "../view/produk";
 
-const ProdukPage = () => {
-  const { push } = useRouter();
+type ProductType = {
+  id: string;
+  nama: string;
+  harga: number;
+  ukuran: string;
+  warna: string;
+}
 
-  useEffect(() => {
-    const loginStatus = localStorage.getItem("isLogin") === "true";
-    if (!loginStatus) {
-      push("/auth/login");
-    }
-  }, [push]);
+const kategori = () => {
+    const [products, setProducts] = useState([]);
 
-  return <TampilanProduk />;
+    useEffect(() => {
+        fetch("/api/produk")
+            .then((response) => response.json())
+            .then(responesedata => {
+                setProducts(responesedata.data);
+            })
+            .catch((error) => {
+              console.error("Error fetching products:", error);
+            });
+    }, []);
+//   const { push } = useRouter();
+//   useEffect(() => {
+//     const loginStatus = localStorage.getItem("isLogin") === "true";
+//     if (!loginStatus) {
+//       push("/auth/login");
+//     }
+//   }, [push]);
+//   return <TampilanProduk />;
+  return (
+    <div>
+      <h1>Daftar Produk</h1>
+      {products.map((product: ProductType) => (
+        <div key={product.id}>
+          <h2>{product.nama}</h2>
+          <p>Harga: {product.harga}</p>
+          <p>Ukuran: {product.ukuran}</p>
+          <p>Warna: {product.warna}</p> 
+        </div>
+      ))}
+    </div>
+  );
 };
 
-export default ProdukPage;
+export default kategori;
