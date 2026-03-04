@@ -135,6 +135,26 @@ Langkah 7 - Ambil Data dari Firestore
 
 ![image](images/Praktikum7.2.png)
 
+Langkah 8 - API Mengambil Data Firebase
+---
+
+<li><h3> Edit pages/api/produk.js: </li>
+
+![image](images/Praktikum8.1.png)
+
+<li><h3> Hasil : </h3></li>
+
+![image](images/Hasil6.png)
+
+<li><h3> Modifikasi index.ts pada produk sesuaikan nama typenya dan db nya </li>
+
+![image](images/Praktikum8.2.png)
+
+<li><h3> Hasil : </h3></li>
+
+![image](images/Hasil7.png)
+
+
 ### Tugas Praktikum
 
 ![image](images/tugas1.1.png)
@@ -150,18 +170,8 @@ Langkah 7 - Ambil Data dari Firestore
 ### Pertanyaan Refleksi 
 
 Pertanyaan Evaluasi
-1. Apa fungsi utama _document.js?
 
-Jawaban : Untuk mengatur dan memodifikasi struktur dasar dokumen HTML aplikasi secara global. File tersebut juga digunakan untuk mengatur elemen < html >, < head >, dan < body > yang membungkus seluruh halaman aplikasi.
-
-2. Mengapa < title> tidak disarankan di _document.js?
-
-Jawaban : Karena file tersebut bersifat global dan tidak mendukung perubahan dinamis untuk setiap halaman, jika < title > diletakkan disana maka semua halaman memiliki judul yang sama.
-
-3. Apa perbedaan halaman biasa dan halaman 404.js?
-
-Jawaban : Halaman biasa adalah halaman yang dibuat sesuai dengan sistem routing Next.js dan dapat diakses melalui URL tertentu, seperti /about atau /produk sedangkan halaman 404.js adalah halama khusus yang secara otomatis ditampilkan oleh Next.js ketika akses URL nya tidak tersedia.
-
-4. Mengapa folder public tidak perlu di-import?
-
-Jawaban : Karena folder public merupakan root path nya aplikasi sehingga kita tidak perlu mengimportnya melainkan dengan cara mengakses URL nya.
+1. Apa fungsi API Routes pada Next.js?
+2. Mengapa .env.local tidak boleh di-push ke repository?
+3. Apa perbedaan data statis dan data dinamis?
+4. Mengapa Next.js disebut framework fullstack?
