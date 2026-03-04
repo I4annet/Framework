@@ -41,21 +41,13 @@ li><h3> Hasil : </h3></li>
 
 ![images](images/Hasil3.png)
 
-Langkah 3 - Setup Firebase
+Langkah 3 - Implementasi Skeleton Loading
 ---
 
-![images](images/Praktikum3.1.gif)
-
-
-![images](images/Praktikum3.2.png)
-
-![images](images/Praktikum3.3.png)
+<li><h3> Modfikasi file index.tsx pada folder views/product/index.tsx </li>
 
 <li><h3> Hasil : </h3></li>
 
-![images](images/Hasil3.png)
-
-<li><h3> Klik add app dan pilih Web </li>
 
 ![images](images/Praktikum3.4.png)
 
