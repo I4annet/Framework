@@ -69,49 +69,48 @@ Langkah 4 - Implementasi SWR
 
 <li><h3> Install SWR menggunakan perintah <i>npm install swr</i></li>
 
-![image](images/Praktikum4.1.png)
+![image](images/Praktikum4.png)
 
 <li><h3> Buka dan modifkasi file index.tsx pada folder pages/product/ </li>
 
-![image](images/Praktikum4.2.png)
+![image](images/Praktikum4.1.png)
 
 <li><h3> Buat folder swr pada utils dan tambahkan file dengan nama fetcher.js </li>
 
-![image](images/Praktikum5.1.png)
+![image](images/Praktikum4.3.png)
 
 <li><h3> Modifikasi file fetcher.ts </li>
 
-![image](images/Praktikum5.2.png)
-
-<li><h3> Modifikasi file index.tsx pada folder pages/produk </li>
-
-![image](images/Praktikum6.1.png)
-
-
+![image](images/Praktikum4.2.png)
 
 
 ### Tugas Praktikum
 
-![image](images/Hasil8.png)
+1. Jelaskan perbedaan: Client Side Rendering, Server Side Rendering dan Static Site Generation
 
-![image](images/Hasil9.png)
+Jawaban : CSR dilakukan di browser (client). Server hanya mengirim file dasar, lalu JavaScript yang membangun tampilan halaman. Lalu SSR dilakukan di server setiap ada permintaan. Server mengirim HTML yang sudah lengkap ke browser.Sedangkan SSG Halaman dibuat saat proses build dan disimpan sebagai file statis.
 
-### Pertanyaan Refleksi 
+2. Buat halaman produk dengan: Skeleton loading dan Animasi
 
-Pertanyaan Evaluasi
+3. Refactor kode dari useEffect menjadi SWR.
 
-1. Apa fungsi API Routes pada Next.js?
+```typescript
+"use client";
 
-Jawaban : untuk membuat endpoint backend langsung di dalam proyek yang sama dengan frontend.
+import { useEffect, useState } from "react";
+import TampilanProduct from "../views/product/index";
+import useSWR from "swr";
+import fetcher from "../utils/swr/fetcher";
 
-2. Mengapa .env.local tidak boleh di-push ke repository?
+const Product = () => {
+  const { data, error, isLoading } = useSWR("/api/product", fetcher);
 
-Jawaban : Karena biasanya berisi informasi yang sensitif seperti API Key, password database dan lain-lain.
+  return (
+    <>
+      <TampilanProduct products={isLoading ? [] : data.data} />
+    </>
+  );
+};
 
-3. Apa perbedaan data statis dan data dinamis?
-
-Jawaban : Data statis adalah data yang tetap dan tidak dapat berubah selama aplikasi berjalan, sedangkan Data Dinamis adalah data yang dapat berubah-ubah dan biasanya diambil dari database, API, atau input pengguna saat aplikasi dijalankan.
-
-4. Mengapa Next.js disebut framework fullstack?
-
-Jawaban : Karena dapat menangani backend dan frontend dalam satu framework.
+export default Product;
+```
