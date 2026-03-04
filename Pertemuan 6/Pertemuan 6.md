@@ -157,21 +157,26 @@ Langkah 8 - API Mengambil Data Firebase
 
 ### Tugas Praktikum
 
-![image](images/tugas1.1.png)
+![image](images/Hasil8.png)
 
-![image](images/tugas1.2.png)
-
-<h3> Hasil : </h3>
-
-
-![image](images/tugas1.3.gif)
-
+![image](images/Hasil9.png)
 
 ### Pertanyaan Refleksi 
 
 Pertanyaan Evaluasi
 
 1. Apa fungsi API Routes pada Next.js?
+
+Jawaban : untuk membuat endpoint backend langsung di dalam proyek yang sama dengan frontend.
+
 2. Mengapa .env.local tidak boleh di-push ke repository?
+
+Jawaban : Karena biasanya berisi informasi yang sensitif seperti API Key, password database dan lain-lain.
+
 3. Apa perbedaan data statis dan data dinamis?
+
+Jawaban : Data statis adalah data yang tetap dan tidak dapat berubah selama aplikasi berjalan, sedangkan Data Dinamis adalah data yang dapat berubah-ubah dan biasanya diambil dari database, API, atau input pengguna saat aplikasi dijalankan.
+
 4. Mengapa Next.js disebut framework fullstack?
+
+Jawaban : Karena dapat menangani backend dan frontend dalam satu framework.
