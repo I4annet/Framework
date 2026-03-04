@@ -124,6 +124,17 @@ Langkah 6 - Konfigurasi Firebase
 
 ![image](images/Praktikum6.1.png)
 
+Langkah 7 - Ambil Data dari Firestore
+---
+
+<li><h3> Buat file servicefirebase.js </li>
+
+![image](images/Praktikum7.1.png)
+
+<li><h3>modifikasi file servicefirebase.js </li>
+
+![image](images/Praktikum7.2.png)
+
 ### Tugas Praktikum
 
 ![image](images/tugas1.1.png)
