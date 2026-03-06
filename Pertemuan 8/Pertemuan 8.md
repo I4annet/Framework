@@ -30,28 +30,20 @@ Bagian 2 - Implementasi getServerSideProps pada server.tsx
 
 ![images](images/Hasil2.png)
 
-Langkah 3 - Implementasi Skeleton Loading
+Bagian 3 - Refactor Type ( produk type )
 ---
 
-<li><h3> Modfikasi file index.tsx pada folder views/product/index.tsx </li>
+<li><h3> Buat folder types pada folder pages dan buat file Product.type.ts </li>
 
 ![images](images/Praktikum3.1.png)
 
-<li><h3> Modifikasi file product.module.scss </li>
+<li><h3> Modifikasi Product.type.ts </li>
 
 ![images](images/Praktikum3.png)
 
-<li><h3> Hasil Jalankan browser maka akan muncul skeleton yang terdapat animasi berkedip : </h3></li>
-
-![images](images/Hasil4.png)
-
-<li><h3> Modifikasi pada index.tsx pada folder views/product/index.tsx </li>
+<li><h3> Modifikasikan juga pada file server.tsx </h3></li>
 
 ![images](images/Praktikum3.2.png)
-
-<li><h3> Hasil : </h3></li>
-
-![images](images/Hasil5.png)
 
 Langkah 4 - Implementasi SWR
 ---
