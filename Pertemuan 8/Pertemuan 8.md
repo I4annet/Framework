@@ -7,9 +7,13 @@ Langkah 1 - Setup Halaman SSR
 
 <li><h3> Buat file baru pada pages/products/server.tsx </h3></li>
 
-![images](images/Praktikum1.png)
+![images](images/Praktikum1.1.png)
 
 <li><h3> Modifikasi file server.tsx : </h3></li>
+
+![images](images/Praktikum1.png)
+
+<li><h3> Jalankan browser : http://localhost:3000/produk/server </h3></li>
 
 ![images](images/Hasil1.png)
 
