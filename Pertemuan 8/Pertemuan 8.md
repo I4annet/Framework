@@ -2,7 +2,7 @@
 
 ###  Langkah Praktikum
 
-Langkah 1 - Setup Halaman SSR
+Bagian 1 - Setup Halaman SSR
 ---
 
 <li><h3> Buat file baru pada pages/products/server.tsx </h3></li>
@@ -15,35 +15,20 @@ Langkah 1 - Setup Halaman SSR
 
 <li><h3> Jalankan browser : http://localhost:3000/produk/server </h3></li>
 
+<li><h3> Hasil Bagian 1: </h3></li>
+
 ![images](images/Hasil1.png)
 
-Langkah 2 - Implementasi CSR dengan useEffect
+Bagian 2 - Implementasi getServerSideProps pada server.tsx
 ---
 
-<li><h3> Buka file index.tsx pada folder views/products dan modfikasi kode index.tsx </h3></li>
+<li><h3> Menambahkan getServerSideProps() di pages/produk/server.tsx </h3></li>
 
 ![images](images/Praktikum2.png)
 
-<li><h3> Modifikasi index.tsx pada pages/produk/ </h3></li>
-
-![images](images/Praktikum2.1.png)
-
-<li><h3> Hasil : </h3></li>
+<li><h3> Hasil Bagian 2 : </h3></li>
 
 ![images](images/Hasil2.png)
-
-<li><h3>Modifikasi produk.modules.scss/</h3></li>
-
-![images](images/Praktikum2.3.png)
-
-
-<li><h3>Modifikasi Pada file index.tsx pada folder pages/views/product</h3></li>
-
-![images](images/Praktikum2.2.png)
-
-<li><h3> Hasil : </h3></li>
-
-![images](images/Hasil3.png)
 
 Langkah 3 - Implementasi Skeleton Loading
 ---
