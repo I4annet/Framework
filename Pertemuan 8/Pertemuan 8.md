@@ -45,53 +45,39 @@ Bagian 3 - Refactor Type ( produk type )
 
 ![images](images/Praktikum3.2.png)
 
-Langkah 4 - Implementasi SWR
+Bagian 4 - Uji Perbedaan CSR vs SSR
 ---
 
-<li><h3> Install SWR menggunakan perintah <i>npm install swr</i></li>
+<li><h3> Uji 1 - Skeleton </h3></li>
 
-![image](images/Praktikum4.png)
+  <li><h4> CSR </h4></li>
 
-<li><h3> Buka dan modifkasi file index.tsx pada folder pages/product/ </li>
+![image](images/Praktikum4.1.gif)
 
-![image](images/Praktikum4.1.png)
+ <li><h4> SSR </h4></li>
 
-<li><h3> Buat folder swr pada utils dan tambahkan file dengan nama fetcher.js </li>
+![image](images/Praktikum4.gif)
+
+<li><h3> Uji 2 - Network Tab </li>
+
+<li><h4> SSR </h4></li>
+
+![image](images/Praktikum4.2.png)
+
+  <li><h4> CSR </h4></li>
 
 ![image](images/Praktikum4.3.png)
 
-<li><h3> Modifikasi file fetcher.ts </li>
+<li><h3> Uji 3 - Response HTML </li>
 
-![image](images/Praktikum4.2.png)
+<li><h4> CSR </h4></li>
+
+![image](images/Praktikum4.4.png)
+
+<li><h4> SSR </h4></li>
+
+![image](images/Praktikum4.5.png)
 
 
 ### Tugas Praktikum
 
-1. Jelaskan perbedaan: Client Side Rendering, Server Side Rendering dan Static Site Generation
-
-Jawaban : CSR dilakukan di browser (client). Server hanya mengirim file dasar, lalu JavaScript yang membangun tampilan halaman. Lalu SSR dilakukan di server setiap ada permintaan. Server mengirim HTML yang sudah lengkap ke browser.Sedangkan SSG Halaman dibuat saat proses build dan disimpan sebagai file statis.
-
-2. Buat halaman produk dengan: Skeleton loading dan Animasi
-
-3. Refactor kode dari useEffect menjadi SWR.
-
-```typescript
-"use client";
-
-import { useEffect, useState } from "react";
-import TampilanProduct from "../views/product/index";
-import useSWR from "swr";
-import fetcher from "../utils/swr/fetcher";
-
-const Product = () => {
-  const { data, error, isLoading } = useSWR("/api/product", fetcher);
-
-  return (
-    <>
-      <TampilanProduct products={isLoading ? [] : data.data} />
-    </>
-  );
-};
-
-export default Product;
-```
