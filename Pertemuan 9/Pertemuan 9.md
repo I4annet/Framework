@@ -36,17 +36,39 @@ Bagian 2 – Build Production Mode
 Bagian 3 – Pengujian Perubahan Data
 ---
 
-<li><h3> Buat folder types pada folder pages dan buat file Product.type.ts </li>
+<li><h3> Uji 1 - Tambah Data di Database </li>
 
-![images](images/Praktikum3.1.png)
-
-<li><h3> Modifikasi Product.type.ts </li>
+<ol><h4> 1. Buka database firebasenya dan tambahkan data produk </ol>
 
 ![images](images/Praktikum3.png)
 
-<li><h3> Modifikasikan juga pada file server.tsx </h3></li>
+<ol><h4> 2. Buka halaman:</ol>
 
-![images](images/Praktikum3.2.png)
+<ul><h4> /products (CSR) → Data bertambah </ul>
+
+![images](images/Hasil3.1.png)
+
+<ul><h4> /products/server (SSR) → Data bertambah </ul>
+
+![images](images/Hasil3.png)
+
+<ul><h4> /products/static (SSG) → Data tidak berubah </ul>
+
+![images](images/Hasil2.png)
+
+<li><h3> Uji 2 - Build Ulang </li>
+
+1. Jalankan kembali:
+• npm run build
+o lakukan secara bersamaan dengan npm run dev saat melakukan npm run
+build
+• npm run start
+o npm run dev stop terlebih dahulu setelah itu npm run start
+
+2. Refresh halaman static → Data baru muncul
+
+![images](images/Hasil3.2.png)
+
 
 ### Tugas Praktikum
 
