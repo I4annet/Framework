@@ -5,3 +5,5 @@ type ProductType = {
     image: string;
     category: string;
 }
+
+export type { ProductType };

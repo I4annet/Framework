@@ -1,4 +1,4 @@
-import TampilanRegister from "../view/auth/register";
+import TampilanRegister from "../../view/auth/register";
 
 const halamanRegister = () => {
     return (
