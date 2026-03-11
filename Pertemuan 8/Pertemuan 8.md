@@ -81,3 +81,26 @@ Bagian 4 - Uji Perbedaan CSR vs SSR
 
 ### Tugas Praktikum
 
+Analisis : Berdasarkan hasil pengujian yang dilakukan, dapat disimpulkan bahwa Client Side Rendering (CSR) menampilkan skeleton loading karena data diambil setelah halaman dimuat di browser. HTML awal yang dikirim server juga tidak berisi data produk.
+
+Sedangkan pada Server Side Rendering (SSR), data sudah diproses di server sehingga HTML yang dikirim ke browser sudah lengkap. Hal ini menyebabkan halaman dapat langsung menampilkan data tanpa skeleton loading.
+
+Dengan demikian, SSR lebih unggul dalam kecepatan tampilan awal dan SEO, sedangkan CSR lebih fleksibel untuk aplikasi yang membutuhkan interaksi tinggi di sisi client.
+
+### Studi Analisis 
+Jawab pertanyaan berikut:
+1. Mengapa SSR lebih baik untuk SEO?
+
+<i>Jawaban:</i> Karena HTML yang dikirim ke browser sudah berisi konten lengkap sehingga mesin pencari dapat langsung membaca dan mengindeks halaman.
+
+2. Kapan sebaiknya menggunakan SSR?
+
+<i>Jawaban:</i> Saat halaman membutuhkan data yang selalu terbaru dan ketika SEO penting, contohnya website berita atau e-commerce
+
+3. Apa kekurangan SSR dibanding CSR?
+
+<i>Jawaban:</i> Beban server lebih besar karena server harus merender halamana setiap ada permintaan pengguna
+
+4. Mengapa skeleton tidak muncul pada SSR?
+
+<i>Jawaban:</i> Karena data sudah diproses di server sehingga halaman langsung menampilkan data tanpa proses loading di browser
