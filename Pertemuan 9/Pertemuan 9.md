@@ -72,26 +72,32 @@ o npm run dev stop terlebih dahulu setelah itu npm run start
 
 ### Tugas Praktikum
 
-Analisis : Berdasarkan hasil pengujian yang dilakukan, dapat disimpulkan bahwa Client Side Rendering (CSR) menampilkan skeleton loading karena data diambil setelah halaman dimuat di browser. HTML awal yang dikirim server juga tidak berisi data produk.
+Analisis : Berdasarkan hasil pengujian yang dilakukan setelah menambahkan data, dapat disimpulkan bahwa Client Side Rendering (CSR) menampilkan skeleton loading pada data baru diambil setelah halaman dimuat di browser. HTML awal yang dikirim server juga tidak berisi data produk. Namun untuk data lama, CSR tidak menampilkan skeleton loading.
 
-Sedangkan pada Server Side Rendering (SSR), data sudah diproses di server sehingga HTML yang dikirim ke browser sudah lengkap. Hal ini menyebabkan halaman dapat langsung menampilkan data tanpa skeleton loading.
+Kemudian pada Server Side Rendering (SSR), walaupun sudah menambahkan data baru di firebase, data sudah diproses di server sehingga HTML yang dikirim ke browser sudah lengkap. Hal ini menyebabkan halaman dapat langsung menampilkan data tanpa skeleton loading.
 
-Dengan demikian, SSR lebih unggul dalam kecepatan tampilan awal dan SEO, sedangkan CSR lebih fleksibel untuk aplikasi yang membutuhkan interaksi tinggi di sisi client.
+Sedangkan pada Static Site Generation (SSG) walaupun sudah menambahkan data di firebase, perlu diperlakukan build ulang agar data terbaru dapat ditampilkan di browser.
+
+Dengan demikian, dapat disimpulkan bahwa setiap metode rendering memiliki kelebihan masing-masing. SSR lebih unggul dalam kecepatan tampilan awal dan SEO karena HTML sudah dirender di server, CSR lebih fleksibel untuk aplikasi yang membutuhkan interaksi tinggi di sisi client, sedangkan SSG cocok untuk halaman yang jarang berubah karena memerlukan proses build ulang untuk memperbarui data.
 
 ### Studi Analisis 
 Jawab pertanyaan berikut:
-1. Mengapa SSR lebih baik untuk SEO?
+1. Mengapa SSG tidak menampilkan data terbaru?
 
-<i>Jawaban:</i> Karena HTML yang dikirim ke browser sudah berisi konten lengkap sehingga mesin pencari dapat langsung membaca dan mengindeks halaman.
+<i> Jawaban: </i> Karena data pada SSG diambil saat proses build, sehingga jika ada perubahan data setelah build selesai maka halaman tidak otomatis diperbarui
 
-2. Kapan sebaiknya menggunakan SSR?
+2. Mengapa SSG lebih cepat?
 
-<i>Jawaban:</i> Saat halaman membutuhkan data yang selalu terbaru dan ketika SEO penting, contohnya website berita atau e-commerce
+<i> Jawaban: </i> Karena halaman sudah dibuat menjadi HTML statis saat build, sehingga server hanya perlu mengirim file tanpa memproses data lagi
 
-3. Apa kekurangan SSR dibanding CSR?
+3. Kapan SSG tidak cocok digunakan?
 
-<i>Jawaban:</i> Beban server lebih besar karena server harus merender halamana setiap ada permintaan pengguna
+<i> Jawaban: </i> Ketika data sering berubah atau membutuhkan data terbaru secara real-time
 
-4. Mengapa skeleton tidak muncul pada SSR?
+4. Mengapa e-commerce tidak cocok menggunakan SSG murni?
 
-<i>Jawaban:</i> Karena data sudah diproses di server sehingga halaman langsung menampilkan data tanpa proses loading di browser
+<i> Jawaban: </i> Karena data produk seperti stok, harga, atau promo sering berubah, sehingga perlu data yang selalui diperbarui
+
+5. Apa perbedaan build mode dan development mode?
+
+<i> Jawaban: </i> Development mode digunakan saat proses pengembangan aplikasi sedangkan build mode digunakan untuk membuat versi produksi yang sudah dioptimasi sebelum aplikasi dijalankan di server
