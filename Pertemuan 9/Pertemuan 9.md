@@ -5,19 +5,14 @@
 Bagian 1 - Setup Halaman Static
 ---
 
-<li><h3> Buat file baru pada pages/products/server.tsx </h3></li>
-
-![images](images/Praktikum1.1.png)
-
-<li><h3> Modifikasi file server.tsx : </h3></li>
+<li><h3> Buat file baru pada pages/products/static.tsx </h3></li>
 
 ![images](images/Praktikum1.png)
 
-<li><h3> Jalankan browser : http://localhost:3000/produk/server </h3></li>
+<li><h3> Modifikasi file static.tsx : </h3></li>
 
-<li><h3> Hasil Bagian 1: </h3></li>
+![images](images/Praktikum1.1.png)
 
-![images](images/Hasil1.png)
 
 Bagian 2 - Implementasi getServerSideProps pada server.tsx
 ---
