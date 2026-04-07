@@ -80,48 +80,34 @@ Bagian 4 – Implementasi Static Site Generation (Dynamic SSG)
 
 <li><h3> Buka file [produk].tsx dan modifikasi seperti berikut </i></li>
 
-![image](images/Praktikum4.png)
-
-<li><h3> Buka dan modifkasi file index.tsx pada folder pages/product/ </li>
-
 ![image](images/Praktikum4.1.png)
 
-<li><h3> Buat folder swr pada utils dan tambahkan file dengan nama fetcher.js </li>
+<li><h3> Buka file index.tsx pada folder src/views/DetailProduct dan modifikasi pada line 11 </li>
 
-![image](images/Praktikum4.3.png)
+![image](images/Praktikum4.png)
 
-<li><h3> Modifikasi file fetcher.ts </li>
+<li><h3> Jalankan browser http://localhost:3000/produk </li>
 
-![image](images/Praktikum4.2.png)
+![image](images/Hasil4.gif)
 
+### Pertanyaan Analisis
 
-### Tugas Praktikum
+1. Mengapa getStaticPaths wajib pada dynamic SSG?
 
-1. Jelaskan perbedaan: Client Side Rendering, Server Side Rendering dan Static Site Generation
+Jawaban : Karena Next.js perlu mengetahui daftar parameter (seperti ID) untuk membuat halaman dynamic saat build time. Tanpa ini, halaman tidak bisa digenerate. 
 
-Jawaban : CSR dilakukan di browser (client). Server hanya mengirim file dasar, lalu JavaScript yang membangun tampilan halaman. Lalu SSR dilakukan di server setiap ada permintaan. Server mengirim HTML yang sudah lengkap ke browser.Sedangkan SSG Halaman dibuat saat proses build dan disimpan sebagai file statis.
+2. Mengapa CSR membutuhkan loading state?
 
-2. Buat halaman produk dengan: Skeleton loading dan Animasi
+Jawaban : Karena data diambil di sisi client setelah halaman ditampilkan, sehingga perlu indikator saat menunggu data.
 
-3. Refactor kode dari useEffect menjadi SWR.
+3. Mengapa SSG tidak menampilkan produk baru tanpa build ulang?
 
-```typescript
-"use client";
+Jawaban : Karena data diambil hanya pada saat build, sehingga perubahan setelah build tidak langsung terlihat
 
-import { useEffect, useState } from "react";
-import TampilanProduct from "../views/product/index";
-import useSWR from "swr";
-import fetcher from "../utils/swr/fetcher";
+4. Mana metode terbaik untuk halaman detail e-commerce?
 
-const Product = () => {
-  const { data, error, isLoading } = useSWR("/api/product", fetcher);
+Jawaban : Menggunakan SSG + ISR, karena dibutuhkan performa yang cepat seperti SSG namun bisa memperbarui data secara berkala
 
-  return (
-    <>
-      <TampilanProduct products={isLoading ? [] : data.data} />
-    </>
-  );
-};
+5. Apa risiko menggunakan SSG untuk produk yang sering berubah?
 
-export default Product;
-```
+Jawaban : data tidak menjadi up to date, sehingga data seperti harga atau stok yang sudah berubah tetapi masih menampilkan data yang lama
