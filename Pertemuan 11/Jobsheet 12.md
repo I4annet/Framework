@@ -76,7 +76,7 @@ Bagian 5 – Tambahkan Token Security
 
 1. Mengapa ISR lebih fleksibel dibanding SSG?
 
-Jawaban : Karena Next.js perlu mengetahui daftar parameter (seperti ID) untuk membuat halaman dynamic saat build time. Tanpa ini, halaman tidak bisa digenerate. 
+Jawaban : karena halaman statis bisa diperbarui tanpa perlu build ulang seluruh aplikasi 
 
 2. Apa perbedaan revalidate waktu dan on-demand?
 
