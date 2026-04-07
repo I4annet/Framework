@@ -62,29 +62,34 @@ Bagian 5 – Tambahkan Token Security
 
 <li><h3> Buka file .env dan modifikasi </li>
 
+![image](images/Kode5.png)
+
 <li><h3> Modifikasi file revalidate.ts tambahkan kondisi pada line 13 - 17 </li>
 
-<li><h3>Modifikasi file revalidate.ts tambahkan kondisi pada line 13 - 17 </li>
+![image](images/Kode5.1.png)
 
+### Pengujian Manual Revalidation 
+
+![image](images/Hasil5.png)
 
 ### Pertanyaan Analisis
 
-1. Mengapa getStaticPaths wajib pada dynamic SSG?
+1. Mengapa ISR lebih fleksibel dibanding SSG?
 
 Jawaban : Karena Next.js perlu mengetahui daftar parameter (seperti ID) untuk membuat halaman dynamic saat build time. Tanpa ini, halaman tidak bisa digenerate. 
 
-2. Mengapa CSR membutuhkan loading state?
+2. Apa perbedaan revalidate waktu dan on-demand?
 
 Jawaban : Karena data diambil di sisi client setelah halaman ditampilkan, sehingga perlu indikator saat menunggu data.
 
-3. Mengapa SSG tidak menampilkan produk baru tanpa build ulang?
+3. Mengapa endpoint revalidation harus diamankan?
 
 Jawaban : Karena data diambil hanya pada saat build, sehingga perubahan setelah build tidak langsung terlihat
 
-4. Mana metode terbaik untuk halaman detail e-commerce?
+4. Apa risiko jika token tidak digunakan?
 
 Jawaban : Menggunakan SSG + ISR, karena dibutuhkan performa yang cepat seperti SSG namun bisa memperbarui data secara berkala
 
-5. Apa risiko menggunakan SSG untuk produk yang sering berubah?
+5. Kapan ISR lebih cocok dibanding SSR?
 
 Jawaban : data tidak menjadi up to date, sehingga data seperti harga atau stok yang sudah berubah tetapi masih menampilkan data yang lama
