@@ -33,32 +33,39 @@ Bagian 2 - Pengujian ISR
 
 ![images](images/Hasil2.1.png)
 
-Bagian 3 - Implementasi SSR
+Bagian 3 - Buat API Revalidate
 ---
 
-<li><h3> Modifikasi [produk].tsx pada folder src/pages/produk dan comment line 9 sampai 20
-dikarena kita akan menggunakan metode SSR. Tambahkan beberapa kode untuk SSR </li>
+<li><h3> Buat file revalidate.ts pada folder pages/api/ dan modifikasi </li>
 
-![images](images/Praktikum3.png)
+![images](images/Kode3.png)
 
-<li><h3>Jalankan browser http://localhost:3000/produk/server </h3></li>
-
-![images](images/Hasil3.gif)
-
-Bagian 4 – Implementasi Static Site Generation (Dynamic SSG)
+Bagian 4 – Tambahkan Parameter Data
 ---
 
-<li><h3> Buka file [produk].tsx dan modifikasi seperti berikut </i></li>
+<li><h3> Modifikasi file revalidate.ts </i></li>
 
-![image](images/Praktikum4.1.png)
+![image](images/Kode4.png)
 
-<li><h3> Buka file index.tsx pada folder src/views/DetailProduct dan modifikasi pada line 11 </li>
+<li><h3> Uji coba menambahkan parameter dan value pada url
+http://localhost:3000/api/revalidate?data=produk maka akan muncul true dan
+sesuai dengan kondisi (req.query.data ===”produk”) </li>
 
-![image](images/Praktikum4.png)
+![image](images/Hasil4.png)
 
-<li><h3> Jalankan browser http://localhost:3000/produk </li>
+<li><h3> Uji coba dengan url http://localhost:3000/api/revalidate?data= </li>
 
-![image](images/Hasil4.gif)
+![image](images/Hasil4.1.png)
+
+Bagian 5 – Tambahkan Token Security
+---
+
+<li><h3> Buka file .env dan modifikasi </li>
+
+<li><h3> Modifikasi file revalidate.ts tambahkan kondisi pada line 13 - 17 </li>
+
+<li><h3>Modifikasi file revalidate.ts tambahkan kondisi pada line 13 - 17 </li>
+
 
 ### Pertanyaan Analisis
 
