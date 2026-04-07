@@ -63,33 +63,22 @@ file dengan nama detailProduct.module.scss dan modifikasi filenya </h3></li>
 
 ![images](images/Hasil2.2.png)
 
-Langkah 3 - Implementasi Skeleton Loading
+Bagian 3 - Implementasi SSR
 ---
 
-<li><h3> Modfikasi file index.tsx pada folder views/product/index.tsx </li>
-
-![images](images/Praktikum3.1.png)
-
-<li><h3> Modifikasi file product.module.scss </li>
+<li><h3> Modifikasi [produk].tsx pada folder src/pages/produk dan comment line 9 sampai 20
+dikarena kita akan menggunakan metode SSR. Tambahkan beberapa kode untuk SSR </li>
 
 ![images](images/Praktikum3.png)
 
-<li><h3> Hasil Jalankan browser maka akan muncul skeleton yang terdapat animasi berkedip : </h3></li>
+<li><h3>Jalankan browser http://localhost:3000/produk/server </h3></li>
 
-![images](images/Hasil4.png)
+![images](images/Hasil3.gif)
 
-<li><h3> Modifikasi pada index.tsx pada folder views/product/index.tsx </li>
-
-![images](images/Praktikum3.2.png)
-
-<li><h3> Hasil : </h3></li>
-
-![images](images/Hasil5.png)
-
-Langkah 4 - Implementasi SWR
+Bagian 4 – Implementasi Static Site Generation (Dynamic SSG)
 ---
 
-<li><h3> Install SWR menggunakan perintah <i>npm install swr</i></li>
+<li><h3> Buka file [produk].tsx dan modifikasi seperti berikut </i></li>
 
 ![image](images/Praktikum4.png)
 
