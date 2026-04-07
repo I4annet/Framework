@@ -2,66 +2,36 @@
 
 ###  Langkah Praktikum
 
-Bagian 1 - Membuat Dynamic Route
+Bagian 1 - Tambahkan revalidate
 ---
 
-<li><h3>Buka file pages/products/[product].tsx dan modfikasi sbb ( line 20 )</h3></li>
+<li><h3> Buka halaman static.tsx pada folder src/pages/produk</h3></li>
 
-![images](images/Praktikum1.png)
+![images](images/Kode1.png)
 
-<li><h3> Hasil jalankan browser http://localhost:3000/produk : </h3></li>
+Artinya:
 
-![images](images/Hasil1.png)
+• Setiap 10 detik halaman akan dicek ulang
 
-Bagian 2 - Implementasi CSR (Client Rendering)
+• Jika ada perubahan data → cache diperbarui
+
+
+Bagian 2 - Pengujian ISR 
 ---
 
-<li><h3> Modifikasi pada file [produk].tsx pada folder src/pages/produk/ </h3></li>
+<li><h3> Jalankan npm run build dan npm run start: ( lakukan hal sama seperti JS sebelumnya untuk ngebuild SSG) </h3></li>
 
-![images](images/Praktikum2.png)
+![images](images/Kode2.png)
 
-<li><h3> Modifikasi file servicefirebase.ts</h3></li>
+<li><h3>Tambahkan data baru di database pada firebase</h3></li>
 
-![images](images/Praktikum2.1.png)
-
-<li><h3> Pada file produk.ts pada folder pages/api di rename menjadi [[...product]].ts dan modifikasi isi kode pada file</h3></li>
-
-![images](images/Praktikum2.2.png)
-
-<li><h3> Jalankan alamat url http://localhost:3000/api/produk/123 </h3></li>
+![images](images/Kode2.1.png)
 
 ![images](images/Hasil2.png)
-
-<li><h3>Buat file dengan nama index.tsx pada folder views/DetailProduct selain itu buat juga
-file dengan nama detailProduct.module.scss dan modifikasi filenya </h3></li>
-
-![images](images/Praktikum2.3.png)
-
-<li><h3>Modifikasi index.tsx pada folder DetailProduct</h3></li>
-
-![images](images/Praktikum2.4.png)
-
-<li><h3>Modifikasi file pada [product].tsx </h3></li>
-
-![images](images/Praktikum2.5.png)
-
-<li><h3>Modifikasi index.tsx pada folder views/detailProduct line 16 </h3></li>
-
-![images](images/Praktikum2.4.png)
 
 <li><h3> Hasil : </h3></li>
 
 ![images](images/Hasil2.1.png)
-
-<h3><li>Agar tulisan detail produk ditengah maka modifikasi file detailProduct.module.scss line
-103-108 dan file index.tsx tambahkan code pada line 7,8 dan 22 menjadi </h3></li>
-
-![images](images/Praktikum2.7.png)
-![images](images/Praktikum2.6.png)
-
-<h3><li> Hasil : </h3></li>
-
-![images](images/Hasil2.2.png)
 
 Bagian 3 - Implementasi SSR
 ---
