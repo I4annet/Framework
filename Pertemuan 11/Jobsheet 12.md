@@ -80,16 +80,16 @@ Jawaban : karena halaman statis bisa diperbarui tanpa perlu build ulang seluruh 
 
 2. Apa perbedaan revalidate waktu dan on-demand?
 
-Jawaban : Karena data diambil di sisi client setelah halaman ditampilkan, sehingga perlu indikator saat menunggu data.
+Jawaban : Revalidate waktu membuat halaman otomatis diperbarui setelah interval tertentu (misalnya tiap 10 detik). Sedankan on-demand membuat halaman diperbarui hanya saat ada trigger khusus (misalnya dari API).
 
 3. Mengapa endpoint revalidation harus diamankan?
 
-Jawaban : Karena data diambil hanya pada saat build, sehingga perubahan setelah build tidak langsung terlihat
+Jawaban : Karena endpoint ini bisa memicu pembaruan halaman. Jika tidak diamankan, maka orang lain bisa mengaksesnya dan menyebabkan beban server meningkat atau perubahan data tanpa kontrol.
 
 4. Apa risiko jika token tidak digunakan?
 
-Jawaban : Menggunakan SSG + ISR, karena dibutuhkan performa yang cepat seperti SSG namun bisa memperbarui data secara berkala
+Jawaban : Endpoint terbuka untuk siapa saja dan terjadi penyalahgunaan seperti spam request, penurunan performa dan update data yang tidak terkendali
 
 5. Kapan ISR lebih cocok dibanding SSR?
 
-Jawaban : data tidak menjadi up to date, sehingga data seperti harga atau stok yang sudah berubah tetapi masih menampilkan data yang lama
+Jawaban : ISR lebih cocok saat data tidak harus real-time, tetapi tetap perlu update berkala seperti blog atau e-commerce
