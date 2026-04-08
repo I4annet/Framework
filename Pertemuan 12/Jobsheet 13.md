@@ -40,27 +40,37 @@ Bagian 4 – Batasi Route Tertentu
 
 ![image](images/Kode4.png)
 
-<li><h3> Artinya:
+<li><h3> Artinya: </h3></li>
 
 • Middleware hanya berlaku untuk /products dan /about
-• Halaman lain tetap normal
-• Ketika user mengakses halaman produk dan about maka akan langsung redirect
-ke halaman home</li>
 
-Bagian 5 – Tambahkan Token Security
+• Halaman lain tetap normal
+
+• Ketika user mengakses halaman produk dan about maka akan langsung redirect
+ke halaman home
+
+Bagian 5 – Simulasi Sistem Login
 ---
 
-<li><h3> Buka file .env dan modifikasi </li>
+<li><h3> Modifikasi file middleware.ts </li>
 
 ![image](images/Kode5.png)
 
-<li><h3> Modifikasi file revalidate.ts tambahkan kondisi pada line 13 - 17 </li>
-
-![image](images/Kode5.1.png)
-
-### Pengujian Manual Revalidation 
+<li><h3> Jika user langsung mengakses ke alamat http://localhost:3000/produk tidak akan bisa
+user akan diarahkan ke halaman login </li>
 
 ![image](images/Hasil5.png)
+
+### Pengujian
+
+<li><h3> Uji 1 – isLogin = false </h3></li>
+
+
+
+
+<li><h3> Uji 2 – isLogin = true </h3></li>
+
+<li><h3>Uji 3 – Tambahkan Multiple Route </h3></li>
 
 ### Pertanyaan Analisis
 
