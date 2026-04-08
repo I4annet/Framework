@@ -37,17 +37,51 @@ Bagian 4 – Tambahkan SessionProvider
 
 ![image](images/Kode4.png)
 
-Bagian 5 – Simulasi Sistem Login
+Bagian 5 – Tambahkan Tombol Login & Logout
 ---
 
-<li><h3> Modifikasi file middleware.ts </li>
+<li><h3> Buka index.tsx pada folder component/navbar dan modifikasi file index.tsx pada line 10 dan 2  </li>
 
 ![image](images/Kode5.png)
 
-<li><h3> Jika user langsung mengakses ke alamat http://localhost:3000/produk tidak akan bisa
-user akan diarahkan ke halaman login </li>
+<li><h3> Buka file file navbar.module.scss tambahkan code pada line 9 </li>
+
+![image](images/Kode5.1.png)
+
+<li><h3>Jalankan http://localhost:3000/ </li>
 
 ![image](images/Hasil5.png)
+
+<li><h3>Jika di klik sign in maka akan muncul dan isikan textbox masing. Setelah itu klik button sign in dan setelah diklik maka akan kembali ke halaman localhost </li>
+
+![image](images/Hasil5.1.png)
+
+<li><h3>Setelah berhasil login maka akan muncul session</li>
+
+![image](images/Hasil5.2.png)
+
+<li><h3>Untuk dapat menangkap data pada session maka tambahkan code sebagai berikut :</li>
+
+![image](images/Kode5.2.png)
+
+<li><h3>Uji coba sign in dan sign out</li>
+
+o Jalankan localhost
+
+![image](images/Hasil5.png)
+
+o Klik sign in dan isikan textboxnya
+
+![image](images/Hasil5.3.png)
+
+o Maka akan muncul tombol signout
+
+![image](images/Hasil5.4.png)
+
+o Ketika user klik signout maka akan kembali sign in .
+
+![image](images/Hasil5.5.png)
+
 
 ### Pengujian
 
