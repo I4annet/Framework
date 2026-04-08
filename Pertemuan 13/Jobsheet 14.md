@@ -1,20 +1,16 @@
-# Jobsheet 13 - Middleware & Route Protection 
+# Jobsheet 14 - Sistem Autentikasi & Proteksi Route 
 
 ###  Langkah Praktikum
 
-Bagian 1 - Membuat Middleware
+Bagian 1 - Install NextAuth
 ---
 
-<li><h3> Modifikasi file index.ts pada folder src/pages/produk</h3></li>
+<li><h3> npm install next-auth –force </h3></li>
 
 ![images](images/Kode1.png)
 
-<li><h3> Buat file: src/middleware.ts Sejajar dengan folder pages </h3></li>
 
-![images](images/Kode1.1.png)
-
-
-Bagian 2 - Struktur Dasar Middleware
+Bagian 2 - Konfigurasi API Auth
 ---
 
 ![images](images/Kode2.png)
