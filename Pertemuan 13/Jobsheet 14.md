@@ -114,6 +114,35 @@ o Ketika user klik signout maka akan kembali sign in .
 ![image](images/Hasil6.2.png)
 
 
+### Proteksi Halaman Profile ( Full Name )
+
+<li><h2>Buat Halaman Profile </h2></li>
+<li><h3>pages/profile/index.tsx dan modifikasi file index.tsx </h3></li>
+
+![image](images/Kode7.png)
+
+<li><h3> jalankan browser </h3></li>
+
+![image](images/Hasil7.png)
+
+<li><h2>Buat Middleware Authorization </h2></li>
+
+<li><h3>Buat file withAuth.ts dan folder dengan nama middleware di src</h3></li>
+
+![image](images/Hasil7.1.png)
+
+<li><h3>Modifikasi withAuth.ts</h3></li>
+
+![image](images/Kode7.1.png)
+
+<li><h3>Modifikasi file middleware.ts </h3></li>
+
+![image](images/Kode7.2.png)
+
+<li><h3>Jika user mengarahkan ke halaman profile tidak akan bisa, user akan diarahkan
+ke alamat localhost </h3></li>
+
+
 
 ### Tugas Praktikum 
 
