@@ -31,7 +31,7 @@ Bagian 3 - Redirect Sederhana
 
 <li><h3> Semua halaman akan redirect ke home dan error dikarenakan terus menerus loading </li>
 
-![images](images/Kode3.png)
+![images](images/Hasil3.png)
 
 Bagian 4 – Batasi Route Tertentu
 ---
