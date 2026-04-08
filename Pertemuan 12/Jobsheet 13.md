@@ -47,12 +47,6 @@ Bagian 4 – Batasi Route Tertentu
 • Ketika user mengakses halaman produk dan about maka akan langsung redirect
 ke halaman home</li>
 
-![image](images/Hasil4.png)
-
-<li><h3> Uji coba dengan url http://localhost:3000/api/revalidate?data= </li>
-
-![image](images/Hasil4.1.png)
-
 Bagian 5 – Tambahkan Token Security
 ---
 
