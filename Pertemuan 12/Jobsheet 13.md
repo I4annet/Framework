@@ -1,55 +1,51 @@
-# Jobsheet 12 - Incremental Static Regeneration (ISR)
+# Jobsheet 13 - Middleware & Route Protection 
 
 ###  Langkah Praktikum
 
-Bagian 1 - Tambahkan revalidate
+Bagian 1 - Membuat Middleware
 ---
 
-<li><h3> Buka halaman static.tsx pada folder src/pages/produk</h3></li>
+<li><h3> Modifikasi file index.ts pada folder src/pages/produk</h3></li>
 
 ![images](images/Kode1.png)
 
-Artinya:
+<li><h3> Buat file: src/middleware.ts Sejajar dengan folder pages </h3></li>
 
-• Setiap 10 detik halaman akan dicek ulang
-
-• Jika ada perubahan data → cache diperbarui
+![images](images/Kode1.1.png)
 
 
-Bagian 2 - Pengujian ISR 
+Bagian 2 - Struktur Dasar Middleware
 ---
-
-<li><h3> Jalankan npm run build dan npm run start: ( lakukan hal sama seperti JS sebelumnya untuk ngebuild SSG) </h3></li>
 
 ![images](images/Kode2.png)
 
-<li><h3>Tambahkan data baru di database pada firebase</h3></li>
+o Jika menggunakan NextResponse.next() → tidak ada redirect.
 
-![images](images/Kode2.1.png)
+o Jadi masih bisa mengakses ke http://localhost:3000/produk
 
-![images](images/Hasil2.png)
 
-<li><h3> Hasil : </h3></li>
-
-![images](images/Hasil2.1.png)
-
-Bagian 3 - Buat API Revalidate
+Bagian 3 - Redirect Sederhana
 ---
-
-<li><h3> Buat file revalidate.ts pada folder pages/api/ dan modifikasi </li>
 
 ![images](images/Kode3.png)
 
-Bagian 4 – Tambahkan Parameter Data
+<li><h3> Semua halaman akan redirect ke home dan error dikarenakan terus menerus loading </li>
+
+![images](images/Kode3.png)
+
+Bagian 4 – Batasi Route Tertentu
 ---
 
-<li><h3> Modifikasi file revalidate.ts </i></li>
+<li><h3> Untuk mengatasi pada bagian 3 maka perlu pembatasan route </i></li>
 
 ![image](images/Kode4.png)
 
-<li><h3> Uji coba menambahkan parameter dan value pada url
-http://localhost:3000/api/revalidate?data=produk maka akan muncul true dan
-sesuai dengan kondisi (req.query.data ===”produk”) </li>
+<li><h3> Artinya:
+
+• Middleware hanya berlaku untuk /products dan /about
+• Halaman lain tetap normal
+• Ketika user mengakses halaman produk dan about maka akan langsung redirect
+ke halaman home</li>
 
 ![image](images/Hasil4.png)
 

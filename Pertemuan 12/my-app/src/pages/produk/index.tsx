@@ -6,6 +6,7 @@ import fetcher from "../../utils/swr/fetcher";
 
 // const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const kategori = () => {
+    const { push } = useRouter(); // Menambahkan ini
     const [products, setProducts] = useState([]);
 
     const { data, error, isLoading } = useSWR("/api/produk", fetcher);
