@@ -96,42 +96,137 @@ Bisa mengakses /products</h4>
 
 o /products
 
+```text
+src/pages/produk
+```
+
 o /about
+```text
+src/pages/produk
+```
 
 o /login
+```text
+src/pages/produk
+```
 
 2. Implementasikan Middleware:
 
-o Redirect ke /login jika belum login.
+```typescript
 
-o Izinkan akses jika login true.
+export function middleware(request: NextRequest) {
+    // const isLogin = false;
+        const isLogin = true;  // Ganti dengan true
+
+    if (isLogin) {
+        return NextResponse.next();
+    }else {
+        return NextResponse.redirect(new URL("/auth/login", request.url));
+    }
+}
+    // return NextResponse.redirect(new URL("/", request.url));
+    // return NextResponse.next();
+```
 
 3. Tambahkan proteksi hanya untuk route tertentu.
+
+```typescript
+export const config = { 
+    matcher: ["/produk", "/about"],
+};
+```
 
 4. Dokumentasikan:
 
 o Screenshot sebelum dan sesudah redirect.
 
+<li><h3> Sebelum login (isLogin = false) </h3></li>
+
+![image](images/gif1.gif)
+
+User dapat masuk ke dalam / belum login dan user tidak bisa mengakses `/produk` dan`/about`
+lalu akan di-redirect atau di pindahkan ke halaman login 
+
+<li><h3> Sesudah login (isLogin = true)</h3></li>
+
+![image](images/gif2.gif)
+
+User sudah login dan dapat mengakses halaman `/produk` dan `/about`
+
 o Perbandingan dengan useEffect.
+
+<h3>Perbandingan Middleware vs useEffect</h3>
+
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Aspek</th>
+      <th>Middleware</th>
+      <th>useEffect (Client-side)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Waktu eksekusi</td>
+      <td>Sebelum halaman dirender (server-side)</td>
+      <td>Setelah halaman dirender (client-side)</td>
+    </tr>
+    <tr>
+      <td>Keamanan</td>
+      <td>Lebih aman (tidak bisa dimanipulasi user)</td>
+      <td>Kurang aman (bisa dimanipulasi di browser)</td>
+    </tr>
+    <tr>
+      <td>Tampilan (UX)</td>
+      <td>Tidak ada glitch / flicker</td>
+      <td>Bisa terjadi glitch (flash sebelum redirect)</td>
+    </tr>
+    <tr>
+      <td>Redirect</td>
+      <td>Langsung sebelum halaman tampil</td>
+      <td>Terjadi setelah halaman sempat tampil</td>
+    </tr>
+    <tr>
+      <td>Performa</td>
+      <td>Lebih optimal untuk proteksi route</td>
+      <td>Kurang optimal karena render dulu</td>
+    </tr>
+    <tr>
+      <td>Akses langsung URL</td>
+      <td>Langsung dicegah</td>
+      <td>Masih sempat mengakses sebelum redirect</td>
+    </tr>
+    <tr>
+      <td>Kompleksitas</td>
+      <td>Sedikit lebih kompleks (konfigurasi)</td>
+      <td>Lebih mudah (cukup di komponen React)</td>
+    </tr>
+    <tr>
+      <td>Kapan digunakan</td>
+      <td>Proteksi halaman (auth, role, dll)</td>
+      <td>Efek UI sederhana / validasi ringan</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Pertanyaan Analisis
 
 1. Mengapa middleware lebih aman dibanding useEffect?
 
-Jawaban : karena halaman statis bisa diperbarui tanpa perlu build ulang seluruh aplikasi 
+Jawaban : Karena middleware berjalan di server sebelum halaman dikirim ke user, sehingga proses validasi (misalnya autentikasi) terjadi lebih awal dan tidak bisa diubah dari sisi client.
 
 2. Mengapa middleware tidak menimbulkan glitch?
 
-Jawaban : Revalidate waktu membuat halaman otomatis diperbarui setelah interval tertentu (misalnya tiap 10 detik). Sedankan on-demand membuat halaman diperbarui hanya saat ada trigger khusus (misalnya dari API).
+Jawaban : Karena middleware bekerja sebelum rendering halaman, user hanya akan melihat hasil akhirnya saja (seperti langsung redirect ke login)
 
 3. Apa risiko jika semua halaman diproteksi tanpa pengecualian?
 
-Jawaban : Karena endpoint ini bisa memicu pembaruan halaman. Jika tidak diamankan, maka orang lain bisa mengaksesnya dan menyebabkan beban server meningkat atau perubahan data tanpa kontrol.
+Jawaban : Bisa menyebabkan halaman publik seperti login, register, landing page ikut terblokir, sehingga user tidak bisa mengakses apapun
 
 4. Kapan middleware tidak diperlukan?
 
-Jawaban : Endpoint terbuka untuk siapa saja dan terjadi penyalahgunaan seperti spam request, penurunan performa dan update data yang tidak terkendali
+Jawaban : Jika halaman tidak butuh proteksi atau validasi khusus, seperti halaman statis (SSG), landing page, atau konten publik.
 
 5. Apa perbedaan middleware dan API route?
 
-Jawaban : ISR lebih cocok saat data tidak harus real-time, tetapi tetap perlu update berkala seperti blog atau e-commerce
+Jawaban : Middleware berfungsi sebagai penjaga awal yang berjalan sebelum request diproses, sedangkan API route adalah endpoint backend yang digunakan untuk menjalankan logika tertentu (CRUD, ambil data, dll) dan mengembalikan response ke client
