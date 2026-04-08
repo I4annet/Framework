@@ -30,21 +30,12 @@ Bagian 3 - Tambahkan Secret
 
 ![images](images/Kode3.png)
 
-Bagian 4 – Batasi Route Tertentu
+Bagian 4 – Tambahkan SessionProvider
 ---
 
-<li><h3> Untuk mengatasi pada bagian 3 maka perlu pembatasan route </i></li>
+<li><h3> Buka file _app.tsx dan modifikasi </i></li>
 
 ![image](images/Kode4.png)
-
-<li><h3> Artinya: </h3></li>
-
-• Middleware hanya berlaku untuk /products dan /about
-
-• Halaman lain tetap normal
-
-• Ketika user mengakses halaman produk dan about maka akan langsung redirect
-ke halaman home
 
 Bagian 5 – Simulasi Sistem Login
 ---
