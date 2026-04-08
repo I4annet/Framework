@@ -65,31 +65,73 @@ user akan diarahkan ke halaman login </li>
 
 <li><h3> Uji 1 – isLogin = false </h3></li>
 
+<h4> Akses: /products </h4>
 
+![image](images/Kode5.png)
 
+<h4> Hasil:
+Redirect ke /login </h4>
+
+![image](images/Hasil5.png)
 
 <li><h3> Uji 2 – isLogin = true </h3></li>
 
+<h4> Ubah:
+const isLogin = true </h4>
+
+![image](images/KodeUji2.png)
+
+<h4> Hasil:
+Bisa mengakses /products</h4>
+
+![image](images/HasilUji2.png)
+
 <li><h3>Uji 3 – Tambahkan Multiple Route </h3></li>
+
+![image](images/KodeUji3.png)
+
+### Tugas Praktikum 
+
+1. Buat halaman:
+
+o /products
+
+o /about
+
+o /login
+
+2. Implementasikan Middleware:
+
+o Redirect ke /login jika belum login.
+
+o Izinkan akses jika login true.
+
+3. Tambahkan proteksi hanya untuk route tertentu.
+
+4. Dokumentasikan:
+
+o Screenshot sebelum dan sesudah redirect.
+
+o Perbandingan dengan useEffect.
 
 ### Pertanyaan Analisis
 
-1. Mengapa ISR lebih fleksibel dibanding SSG?
+1. Mengapa middleware lebih aman dibanding useEffect?
 
 Jawaban : karena halaman statis bisa diperbarui tanpa perlu build ulang seluruh aplikasi 
 
-2. Apa perbedaan revalidate waktu dan on-demand?
+2. Mengapa middleware tidak menimbulkan glitch?
 
 Jawaban : Revalidate waktu membuat halaman otomatis diperbarui setelah interval tertentu (misalnya tiap 10 detik). Sedankan on-demand membuat halaman diperbarui hanya saat ada trigger khusus (misalnya dari API).
 
-3. Mengapa endpoint revalidation harus diamankan?
+3. Apa risiko jika semua halaman diproteksi tanpa pengecualian?
 
 Jawaban : Karena endpoint ini bisa memicu pembaruan halaman. Jika tidak diamankan, maka orang lain bisa mengaksesnya dan menyebabkan beban server meningkat atau perubahan data tanpa kontrol.
 
-4. Apa risiko jika token tidak digunakan?
+4. Kapan middleware tidak diperlukan?
 
 Jawaban : Endpoint terbuka untuk siapa saja dan terjadi penyalahgunaan seperti spam request, penurunan performa dan update data yang tidak terkendali
 
-5. Kapan ISR lebih cocok dibanding SSR?
+5. Apa perbedaan middleware dan API route?
 
 Jawaban : ISR lebih cocok saat data tidak harus real-time, tetapi tetap perlu update berkala seperti blog atau e-commerce
