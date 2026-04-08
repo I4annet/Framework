@@ -83,34 +83,37 @@ o Ketika user klik signout maka akan kembali sign in .
 ![image](images/Hasil5.5.png)
 
 
-### Pengujian
+### Menambahkan Data Tambahan ( Full Name )
 
-<li><h3> Uji 1 – isLogin = false </h3></li>
+<li><h3>Buka file [...nextauth].js dan tambahkan code pada line 22 </h3></li>
 
-<h4> Akses: /products </h4>
+![image](images/Kode6.png)
 
-![image](images/Kode5.png)
+<li><h3> Pada callbacks modifikasi codenya menjadi berikut : </h3></li>
 
-<h4> Hasil:
-Redirect ke /login </h4>
+![image](images/Kode6.1.png)
 
-![image](images/Hasil5.png)
+<li><h3>Modifikasi navbar.module.scss </h3></li>
 
-<li><h3> Uji 2 – isLogin = true </h3></li>
+![image](images/Kode6.2.png)
 
-<h4> Ubah:
-const isLogin = true </h4>
+<li><h3>Modifikasi index.tsx pada folder components/layouts/navbar </h3></li>
 
-![image](images/KodeUji2.png)
+![image](images/Kode6.3.png)
 
-<h4> Hasil:
-Bisa mengakses /products</h4>
+<li><h3>Jalankan browser pada localhost </h3></li>
 
-![image](images/HasilUji2.png)
+![image](images/Hasil6.png)
 
-<li><h3>Uji 3 – Tambahkan Multiple Route </h3></li>
+<li><h3>Lakukan Sign In </h3></li>
 
-![image](images/KodeUji3.png)
+![image](images/Hasil6.1.png)
+
+<li><h3>Hasil Sign In </h3></li>
+
+![image](images/Hasil6.2.png)
+
+
 
 ### Tugas Praktikum 
 
