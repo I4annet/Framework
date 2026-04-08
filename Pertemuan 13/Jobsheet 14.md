@@ -13,14 +13,15 @@ Bagian 1 - Install NextAuth
 Bagian 2 - Konfigurasi API Auth
 ---
 
+<li><h3> Buat file dan folder pada folder pages/api/auth/[...nextauth].ts </h3></li>
+
 ![images](images/Kode2.png)
 
-o Jika menggunakan NextResponse.next() → tidak ada redirect.
+<li><h3> Modifikasi file [...nextauth].ts </h3></li>
 
-o Jadi masih bisa mengakses ke http://localhost:3000/produk
+![images](images/Kode2.1.png)
 
-
-Bagian 3 - Redirect Sederhana
+Bagian 3 - Tambahkan Secret
 ---
 
 ![images](images/Kode3.png)
