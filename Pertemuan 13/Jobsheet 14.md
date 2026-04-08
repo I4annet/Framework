@@ -24,11 +24,11 @@ Bagian 2 - Konfigurasi API Auth
 Bagian 3 - Tambahkan Secret
 ---
 
+<li><h3> Buka file .env.local dan tambahkan code pada line 12 </li> 
+
+`NEXTAUTH_SECRET=RANDOM_BASE64_STRING`
+
 ![images](images/Kode3.png)
-
-<li><h3> Semua halaman akan redirect ke home dan error dikarenakan terus menerus loading </li>
-
-![images](images/Hasil3.png)
 
 Bagian 4 – Batasi Route Tertentu
 ---
