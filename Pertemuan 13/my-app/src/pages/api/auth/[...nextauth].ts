@@ -15,17 +15,17 @@ export const authOptions:NextAuthOptions = {
                 password: { label: "Password", type: "password" },
             },
             async authorize(credentials) {
-                const user : any = {
+                if (
+                    credentials?.email == "user@gmail.com" &&
+                    credentials?.password == "123"
+                ){
+                    return {
                     id: "1",
                     email: credentials?.email,
-                    password: credentials?.password,
-                    fullname: credentials?.fullname,
-                };
-                if (user) {
-                    return user
-                    } else {
-                        return null;
-                    }
+                    fullname: "User",
+                    };
+                }
+                return null;
             }
         })
     ],
