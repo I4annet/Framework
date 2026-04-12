@@ -42,13 +42,27 @@ berikut</h3></li>
 Bagian 2 - Membuat API Register
 ---
 
-<li><h3> Buat file dan folder pada folder pages/api/auth/[...nextauth].ts </h3></li>
+<li><h3>Buka file servicefirebase.ts pada folder src/utils/db dan modifikasi </h3></li>
+
+![images](images/Kode2.2.png)
+
+<li><h3> Buat file register.ts pada folder api </h3></li>
+
+![images](images/Kode2.3.png)
+
+<li><h3>Modifikasi file register.ts </h3></li>
+
+![images](images/Kode2.1.png)
+
+<li><h3>Modifikasi index.tsx pada folder register ( tambahkan beberapa code)</h3></li>
 
 ![images](images/Kode2.png)
 
-<li><h3> Modifikasi file [...nextauth].ts </h3></li>
+<li><h3>Buka browser http://localhost:3000/auth/register isikan data dan klik register. Jika
+berhasil maka akan masuk ke menu login</h3></li>
 
-![images](images/Kode2.1.png)
+![images](images/Hasil2.png)
+
 
 Bagian 3 - Tambahkan Secret
 ---
