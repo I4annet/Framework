@@ -2,15 +2,44 @@
 
 ###  Langkah Praktikum
 
-Bagian 1 - Install NextAuth
+Bagian 1 - Membuat Register View
 ---
 
-<li><h3> npm install next-auth –force </h3></li>
+<li><h3> Buat folder pada views dengan nama register dan tambahkan 2 file yaitu index.tsx
+dan register.module.scss </h3></li>
+
+![images](images/Folder1.png)
+
+<li><h3> Modifikasi file index.tsx ( pada folder views/auth/register/index.tsx) </h3></li>
 
 ![images](images/Kode1.png)
 
+<li><h3>Buka file register.tsx pada folder auth/register.tsx </h3></li>
 
-Bagian 2 - Konfigurasi API Auth
+![images](images/Kode1.1.png)
+
+
+<li><h3>Modifikasi register.module.scss </h3></li>
+
+![images](images/Kode1.2.png)
+
+<li><h3>Tambahkan form inputan pada file index.tsx ( pada folder views/auth/register/index.tsx
+) Form berisi: </h3></li>
+
+![images](images/Kode1.3.png)
+
+<li><h3>Modifikasi register.module.scss </h3></li>
+
+![images](images/Kode1.4.png)
+
+![images](images/Kode1.4(1).png)
+
+<li><h3>Jalankan browsernya http://localhost:3000/auth/register sehingga tampilan sebagai
+berikut</h3></li>
+
+![images](images/Hasil1.png)
+
+Bagian 2 - Membuat API Register
 ---
 
 <li><h3> Buat file dan folder pada folder pages/api/auth/[...nextauth].ts </h3></li>
