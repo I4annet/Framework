@@ -1,43 +1,19 @@
-# Jobsheet 15 - Implementasi Sistem Registrasi (Database Integration) 
+# Jobsheet 16 - Implementasi Login Database & Multi-Role
 
 ###  Langkah Praktikum
 
-Bagian 1 - Membuat Register View
+Bagian 1 - Custom Login Page
 ---
 
-<li><h3> Buat folder pada views dengan nama register dan tambahkan 2 file yaitu index.tsx
-dan register.module.scss </h3></li>
-
-![images](images/Folder1.png)
-
-<li><h3> Modifikasi file index.tsx ( pada folder views/auth/register/index.tsx) </h3></li>
+<li><h3>Tambahkan custom page di NextAuth line 55-57 </h3></li>
 
 ![images](images/Kode1.png)
 
-<li><h3>Buka file register.tsx pada folder auth/register.tsx </h3></li>
+<li><h3>Jalankan browser http://localhost:3000/ dan klik sign in maka akan diarahkan ke
+login </h3></li>
 
-![images](images/Kode1.1.png)
+![images](images/Kode1.png)
 
-
-<li><h3>Modifikasi register.module.scss </h3></li>
-
-![images](images/Kode1.2.png)
-
-<li><h3>Tambahkan form inputan pada file index.tsx ( pada folder views/auth/register/index.tsx
-) Form berisi: </h3></li>
-
-![images](images/Kode1.3.png)
-
-<li><h3>Modifikasi register.module.scss </h3></li>
-
-![images](images/Kode1.4.png)
-
-![images](images/Kode1.4(1).png)
-
-<li><h3>Jalankan browsernya http://localhost:3000/auth/register sehingga tampilan sebagai
-berikut</h3></li>
-
-![images](images/Hasil1.png)
 
 Bagian 2 - Membuat API Register
 ---
