@@ -12,7 +12,7 @@ Bagian 1 - Custom Login Page
 <li><h3>Jalankan browser http://localhost:3000/ dan klik sign in maka akan diarahkan ke
 login </h3></li>
 
-![images](images/Kode1.png)
+![images](images/Hasil1.gif)
 
 
 Bagian 2 - Membuat API Register
