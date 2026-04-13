@@ -64,106 +64,71 @@ berhasil maka akan masuk ke menu login</h3></li>
 ![images](images/Hasil2.png)
 
 
-Bagian 3 - Tambahkan Secret
+Bagian 3 - Install bcrypt
 ---
 
-<li><h3> Buka file .env.local dan tambahkan code pada line 12 </li> 
-
-`NEXTAUTH_SECRET=RANDOM_BASE64_STRING`
+<li><h3>npm install bcrypt --force </li> 
 
 ![images](images/Kode3.png)
 
-Bagian 4 – Tambahkan SessionProvider
----
+<li><h3>npm install --save-dev @types/bcrypt –force</li> 
 
-<li><h3> Buka file _app.tsx dan modifikasi </i></li>
-
-![image](images/Kode4.png)
-
-Bagian 5 – Tambahkan Tombol Login & Logout
----
-
-<li><h3> Buka index.tsx pada folder component/navbar dan modifikasi file index.tsx pada line 10 dan 2  </li>
-
-![image](images/Kode5.png)
-
-<li><h3> Buka file file navbar.module.scss tambahkan code pada line 9 </li>
-
-![image](images/Kode5.1.png)
-
-<li><h3>Jalankan http://localhost:3000/ </li>
-
-![image](images/Hasil5.png)
-
-<li><h3>Jika di klik sign in maka akan muncul dan isikan textbox masing. Setelah itu klik button sign in dan setelah diklik maka akan kembali ke halaman localhost </li>
-
-![image](images/Hasil5.1.png)
-
-<li><h3>Setelah berhasil login maka akan muncul session</li>
-
-![image](images/Hasil5.2.png)
-
-<li><h3>Untuk dapat menangkap data pada session maka tambahkan code sebagai berikut :</li>
-
-![image](images/Kode5.2.png)
-
-<li><h3>Uji coba sign in dan sign out</li>
-
-o Jalankan localhost
-
-![image](images/Hasil5.png)
-
-o Klik sign in dan isikan textboxnya
-
-![image](images/Hasil5.3.png)
-
-o Maka akan muncul tombol signout
-
-![image](images/Hasil5.4.png)
-
-o Ketika user klik signout maka akan kembali sign in .
-
-![image](images/Hasil5.5.png)
-
-### Pengujian
-
-<li><h3>Uji 1 - Belum Login </h3></li>
-
-![image](images/Uji1.gif)
-
-Jika belum login/sign in, kita tidak bisa mengakses halaman profile 
-
-<li><h3> Uji 2 - Sudah Login </h3></li>
-
-![image](images/Uji2.gif)
-
-Jika sudah login/sign in, kita bisa mengakses halaman profile 
-
-<li><h3> Uji 3 - Logout </h3></li>
-
-![image](images/Uji3.gif)
-
-Ketika kita sudah login/sign in lalu logout, maka kita tidak bisa mengakses halaman profile lagi 
+![images](images/Kode3.1.png)
 
 
-### Pertanyaan Analisis
+<li><h3>Buka file servicefirebase.ts pada folder src/utils/db dan modifikasi</li> 
 
-1. Mengapa session menggunakan JWT?
+![images](images/Kode3.2.png)
 
-Jawaban : JWT digunakan karena semua informasi user disimpan di dalam token, sehingga lebih ringan dan cocok untuk aplikasi modern seperti API atau Next.js
+<li><h3>Jalankan browser http://localhost:3000/auth/register dan input data setelah itu klik
+register</li> 
 
-2. Apa perbedaan authorize() dan callback jwt()?
+![images](images/Kode3.3.png)
 
-Jawaban : `authorize()` digunakan saat proses login guna memvalidasi kredensial user (misalnya email & password). Sedangkan `jwt()` adalah callback yang berjalan setelah login untuk menyimpan atau memodifikasi data ke dalam token JWT
+<li><h3>Buka pada firebase jika berhasil maka data register akan masuk</li> 
 
-3. Mengapa middleware perlu getToken()?
+![images](images/Hasil3.png)
 
-Jawaban : Untuk mengambil dan membaca JWT dari request dan juga untuk mengecek apakah user sudah login atau belum sebelum mengakses halaman tertentu
+<li><h3>Jika user memasukkan data yang sama sistem tidak akan memproses tetapi
+permasalahannya user memasukkan data yang sama tidak ada pemberitahuan pada
+layar maka dari itu perlu ada perubahan pada code index.tsx pada folder
+views/auth/register</li> 
 
-4. Apa risiko jika NEXTAUTH_SECRET tidak digunakan?
+![images](images/Kode3.4.png)
 
-Jawaban : JWT tidak terlindungi dengan baik yang resikonya token bisa dipalsukan, data bisa dimanipulasi, dan sistem jadi tidak aman karena tidak ada validasi signature token
+<li></h3>Modifikasi juga pada register.module.scss</h3></li>
 
-5. Apa perbedaan autentikasi dan otorisasi dalam sistem ini?
+![images](images/Kode3.7.png)
 
-Jawaban : Autentikasi adalah proses menentukan siapa pengguna/user(login). Sedangkan otorisasi adalah proses menentukan apa yang boleh diakses user/pengguna setelah login
+<li><h3>Jika berhasil maka hasilnya seperti berikut</h3></li>
+
+![images](images/Hasil3.1.png)
+
+
+
+<li><h3>Tambakan loading dengan menambahkan kode pada index.tsx</h3></li>
+
+[images](images/Hasil3.8.png)
+
+### Pertanyaan Individu
+
+1. Mengapa password harus di-hash? 
+
+Jawaban : Agar tidak disimpan dalam bentuk asli (plain text), sehingga lebih aman jika database bocor.
+
+2. Apa perbedaan addDoc dan setDoc? 
+
+Jawaban : addDoc: ID dibuat otomatis oleh Firebase setDoc: ID ditentukan sendiri
+
+3. Mengapa perlu validasi method POST? 
+
+Jawaban : Untuk memastikan endpoint hanya menerima request yang sesuai (mencegah akses tidak sah seperti GET/PUT).
+
+4. Apa risiko jika email tidak dicek unik? 
+
+Jawaban : Risiko jika email tidak unik
+Bisa terjadi duplikasi akun, membingungkan sistem login, dan berpotensi disalahgunakan.
+
+5. Apa fungsi role pada user?
+
+Jawaban : Untuk mengatur hak akses (misalnya admin atau user biasa).

@@ -16,6 +16,13 @@
        margin-bottom: 40px;
    }
    
+   
+      &_error {
+       color: red;
+       font-size: 14px;
+       margin-top: 8px;
+      }
+      
    &_form {
    background: #ffff;
    width: 100%;

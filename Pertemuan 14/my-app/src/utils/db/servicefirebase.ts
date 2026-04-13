@@ -1,5 +1,6 @@
-import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, query,addDoc, where } from "firebase/firestore";
 import app from "./firebase";
+import bcrypt from "bcrypt";
 
 const db = getFirestore(app);
 
@@ -21,23 +22,36 @@ export async function signUp(
         email: string;
         fullname: string;
         password: string;
+        role?: string;
     },
     callback: Function,
 ) {
+    const email = userData.email.toLowerCase().trim();
     const q = query(collection(db, "users"),
-        where("email", "==", userData.email)
+        where("email", "==", email)
     );
     const querySnapshot = await getDocs(q);
     const data = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     if (data.length > 0) {
-        callback ({
-            status: "success",
-            message: "User registered successfully",
+        return callback ({
+            status: "error",
+            message: "Email already exists",
         });
     } else {
-        callback ({
-            status: "error",
-            message: "User already exists",
-        });
+        userData.password = await bcrypt.hash(userData.password, 10);
+        userData.role = "user";
+        await addDoc(collection(db, "users"), userData)
+            .then(() => {
+                callback ({
+                    status: "success",
+                    message: "User registered successfully",
+                });
+            })
+            .catch((error) => {
+                callback ({
+                    status: "error",
+                    message: "Error occurred while registering user",
+                });
+            });
     }
 }
