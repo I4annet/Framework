@@ -1,6 +1,8 @@
 import { getToken } from "next-auth/jwt";
 import { NextFetchEvent, NextRequest, NextResponse, NextMiddleware } from "next/server";
 
+const hanyaAdmin = ["/admin"];
+
 export default function withAuth(
     middleware: NextMiddleware,
     requireAuth: string[] = [],
@@ -15,6 +17,9 @@ export default function withAuth(
                 const Url = new URL('/', req.url);
                 Url.searchParams.set("callbackUrl", encodeURI(req.url));
                 return NextResponse.redirect(Url)
+            }
+            if (token.role !== "admin" && hanyaAdmin.includes(pathname)) {
+                return NextResponse.redirect(new URL("/", req.url));
             }
     }
     return middleware(req, next);

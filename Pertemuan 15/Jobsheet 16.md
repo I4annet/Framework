@@ -93,15 +93,22 @@ Bagian 6 - Membuat halaman Admin dan authoriz
 
 <li><h3> Buat halaman admin </h3></li>
 
+![images](images/Folder6.png)
+
 <li><h3> Pada index.tsx tambahkan code berikut </h3></li>
+
+![images](images/Kode6.png)
 
 
 <li><h3> Modifikasi withAuth.ts </h3></li>
 
+![images](images/Kode6.1.png)
 
 <li><h3> Jalankan browser localhost:3000/produk dan pada status sudah login. Rubah urlnya
 menjadi http://localhost:3000/admin maka user akan diarahkan ke localhost. Pada
 intinya role selain admin tidak bisa mengakses </h3></li>
+
+![images](images/Hasil6.png)
 
 ### Pertanyaan Individu
 
