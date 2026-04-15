@@ -53,67 +53,34 @@ Bagian 2 - Tambahkan Environment Variables
 
 <li><h3>Copy dan paste client ID dan Client secret ke .env</h3></li>
 
-![images](images/Folder2.png)
 
-<li><h3>Copy paste isi dari register/register.module.scss ke file login/login.module.scss</h3></li>
-<li><h3>Semua text register pada file index.tsx pada folder login diubah menjadi login</h3></li>
-
-![images](images/Kode2.png)
-
-<li><h3>Jangan lupa setting link hrefnya</h3></li>
-
-![images](images/Kode2.1.png)
-
-<li><h3>Lakukan hal yang sama pada file login.module.scss rubah text register menjadi login</h3></li>
-
-![images](images/Kode2.2.png)
-
-<li><h3>Cek pada file login.tsx pada pages/auth</h3></li>
-
-![images](images/Kode2.3.png)
-
-<li><h3>Jalankan browser localhost:3000/auth/login. Tampilannya akan sama dengan register</h3></li>
-
-![images](images/Hasil2.png)
-
-<li><h3>Pada tampilan login kita tidak perlu hapus fullname jadi pada folder views/auth/login/index.tsx hapus fullname</h3></li>
-
-![images](images/Kode2.4.png)
-
-<li><h3>Hasilnya : </h3></li>
-
-![images](images/Hasil2.1.png)
-
-<li><h3>Buka file index.tsx pada folder views/auth/login dan modifikasi codenya seperti berikut ( Untuk line 64 sampai kebawah tidak ada perubahan )</h3></li>
-
-![images](images/Kode2.5.png)
-
-<li><h3>Buka file servicefirebase.ts dan tambahkan code di line 25-38</h3></li>
-
-![images](images/Kode2.6.png)
-
-Bagian 3 - Authorize di NextAuth (Database Login)
+Bagian 3 -Konfigurasi Google Provider di NextAuth dan Handle Callback JWT & Session
 ---
 
-<li><h3>Buka file [...nextauth].ts modifikasi menjadi berikut ( pada bagian providers ) </li> 
+<li><h3>Buka file [...nextauth].ts pada folder api/auth dan modifikasi menjadi berikut </li> 
 
 ![images](images/Kode3.png)
 
+![images](images/Kode3.1.png)
 
-Bagian 4 - Tambahkan Role ke Token
+
+Bagian 4 - Tambahkan Button Login Google
 ---
 
-<li><h3>JWT Callback pada file [...nextauth].ts Modifikasi menjadi </h3></li>
+<li><h3>Modifikasi file index.tsx pada folder views/auth/login</h3></li>
 
 ![images](images/Kode4.png)
 
-<li><h3> Jalankan browser http://localhost:3000/auth/login </h3></li>
+<li><h3> Jalankan browser localhost:3000/auth/login masuk melalui sign in with google.Jika
+berhasil maka akan terhubung dengan akun google. </h3></li>
 
 ![images](images/Hasil4.png)
 
 ![images](images/Hasil4.1.png)
 
-Bagian 5 - Callback URL Logic
+<li><h3>Menampilkan image dari google</h3></li>
+
+Bagian 5 - Simpan Data Google ke Database
 ---
 
 <li><h3> Modifikasi withAuth.ts pada folder src/middleware </h3></li>
