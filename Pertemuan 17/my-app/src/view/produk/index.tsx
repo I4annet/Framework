@@ -19,7 +19,7 @@ const TampilanProduct = ({ products }: { products: ProductType[] }) => {
           <Link key={product.id} href={`/produk/${product.id}`} className={styles.product__content__item}>
             <div className={styles.product__content__item}>
               <div className={styles.product__content__item__image}>
-                <img src={product.image} alt={product.name} width={200} />
+                <img src={product.image} alt={product.name} width={200}  height={200}/>
               </div>
               <h2 className={styles.product__content__item__name}>
                 {product.name}

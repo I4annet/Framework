@@ -5,48 +5,25 @@
 Bagian 1 - Image Optimization
 ---
 
-<li><h3>Langkah 1 – Masuk ke Google Cloud Console Buka: https://console.cloud.google.com/apis/credentials</h3></li>
+<li><h3>A. Optimasi Gambar Lokal (Public Folder)</h3></li>
 
-![images](images/Langkah1.png)
+<li><h4>Buka file src/pages/404.tsx dengan next/image dan modifikasi line 7 menjadi line 8-11</h4></li>
 
-<li><h3>Langkah 2 – Buat Project Baru </h3></li>
+![images](images/Kode1.png)
 
-![images](images/Langkah1.0.png)
+<li><h3>B. Optimasi Gambar Remote (External URL)</h3></li>
 
-<li><h4>Klik New Project </h4></li>
+<li><h4>Buka file views/product/index.tsx dan modifikasi kodenya</h4></li>
 
-![images](images/Langkah1.1.png)
+![images](images/Kode1.1.png)
 
+<li><h4>Buka file next.config.js </h4></li>
+
+![images](images/Kode1.2.png)
 
 <li><h4>Nama project: MyAppNext </h4></li>
 
 ![images](images/Langkah1.2.png)
-
-<li><h4>Klik Create: Setelah berhasil klik https://console.cloud.google.com/apis/credentials pastikan
-projectnya MyAppNext </h4></li>
-
-
-<li><h3>Langkah 3 – Konfigurasi OAuth Consent Screen </h3></li>
-
-<li><h4>Pilih OAuth Consenst Screen dan Pilih Get Started </h4></li>
-
-![images](images/Langkah3.png)
-
-<li><h4>Isikan </h4></li>
-
-![images](images/Langkah3.1.png)
-
-![images](images/Langkah3.2.png)
-
-![images](images/Langkah3.3.png)
-
-![images](images/Langkah3.4.png)
-
-<li><h3>Langkah 4 – Buat OAuth Credentials </h3></li>
-
-<li><h4>Klik create client pada Clients</h4></li>
-
-![images](images/Langkah4.png)
 
 Bagian 2 - Tambahkan Environment Variables
 ---
