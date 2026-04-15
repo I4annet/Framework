@@ -35,20 +35,18 @@ untuk mengecek fontnya bisa menggunakan extension FontFinderi </h4></li>
 ![images](images/Hasil2.png)
 
 
-Bagian 3 -Konfigurasi Google Provider di NextAuth dan Handle Callback JWT & Session
+Praktikum 3 - Script Optimization
 ---
 
-<li><h3>Buka file [...nextauth].ts pada folder api/auth dan modifikasi menjadi berikut </li> 
+<li><h3>Menggunakan next/script </li> 
+<li><h4>Buka file index.tsx pada folder layouts/Navbar dan modifikasi </h4></li>
 
 ![images](images/Kode3.png)
 
-![images](images/Kode3.1.png)
-
-
-Bagian 4 - Tambahkan Button Login Google
+Praktikum 4 - Optimasi Avatar dengan next/image
 ---
 
-<li><h3>Modifikasi file index.tsx pada folder views/auth/login</h3></li>
+<li><h3>Buka file index.tsx pada folder layouts/navbar dan modifikasi :</h3></li>
 
 ![images](images/Kode4.png)
 
