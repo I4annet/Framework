@@ -2,7 +2,7 @@
 
 ###  Langkah Praktikum
 
-Bagian 1 - Image Optimization
+Praktikum 1 - Image Optimization
 ---
 
 <li><h3>A. Optimasi Gambar Lokal (Public Folder)</h3></li>
