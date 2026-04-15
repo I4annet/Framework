@@ -21,14 +21,18 @@ Praktikum 1 - Image Optimization
 
 ![images](images/Kode1.2.png)
 
-<li><h4>Nama project: MyAppNext </h4></li>
-
-![images](images/Langkah1.2.png)
-
-Bagian 2 - Tambahkan Environment Variables
+Praktikum 2 - Font Optimization
 ---
 
-<li><h3>Copy dan paste client ID dan Client secret ke .env</h3></li>
+<li><h3>A. Menggunakan next/font</h3></li>
+<li><h4>Buka file index.tsx pada folder Appshell/index.tsx dan modifkasi </h4></li>
+
+![images](images/Kode2.png)
+
+<li><h4>Jalankan browser localhost:3000/produk maka font akan berubah menjadi roboto
+untuk mengecek fontnya bisa menggunakan extension FontFinderi </h4></li>
+
+![images](images/Hasil2.png)
 
 
 Bagian 3 -Konfigurasi Google Provider di NextAuth dan Handle Callback JWT & Session
