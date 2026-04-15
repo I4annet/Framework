@@ -72,15 +72,36 @@ Bagian 4 - Tambahkan Role ke Token
 
 <li><h3>JWT Callback pada file [...nextauth].ts Modifikasi menjadi </h3></li>
 
-[images](images/Kode4.png)
+![images](images/Kode4.png)
 
 <li><h3> Jalankan browser http://localhost:3000/auth/login </h3></li>
 
-[images](images/Hasil4.png)
+![images](images/Hasil4.png)
 
-[images](images/Hasil4.1.png)
+![images](images/Hasil4.1.png)
+
+Bagian 5 - Callback URL Logic
+---
+
+<li><h3> Modifikasi withAuth.ts pada folder src/middleware </h3></li>
+
+![images](images/Kode5.png)
 
 
+Bagian 6 - Membuat halaman Admin dan authoriz
+---
+
+<li><h3> Buat halaman admin </h3></li>
+
+<li><h3> Pada index.tsx tambahkan code berikut </h3></li>
+
+
+<li><h3> Modifikasi withAuth.ts </h3></li>
+
+
+<li><h3> Jalankan browser localhost:3000/produk dan pada status sudah login. Rubah urlnya
+menjadi http://localhost:3000/admin maka user akan diarahkan ke localhost. Pada
+intinya role selain admin tidak bisa mengakses </h3></li>
 
 ### Pertanyaan Individu
 
