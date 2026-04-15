@@ -5,19 +5,20 @@
 Praktikum 1 - Setup Jest di Next.js
 ---
 
-<li><h3>A. Optimasi Gambar Lokal (Public Folder)</h3></li>
+<li><h3>1. Install Dependencies</h3></li>
 
-<li><h4>Buka file src/pages/404.tsx dengan next/image dan modifikasi line 7 menjadi line 8-11</h4></li>
+<li><h4>Jalankan : npm install jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom --save-dev --force</h4></li>
 
 ![images](images/Kode1.png)
 
-<li><h3>B. Optimasi Gambar Remote (External URL)</h3></li>
+<li><h3>2. Buat File Konfigurasi</h3></li>
 
-<li><h4>Buka file views/product/index.tsx dan modifikasi kodenya</h4></li>
+<li><h4>Buat file:
+o jest.config.mjs dan modifikasi </h4></li>
 
 ![images](images/Kode1.1.png)
 
-<li><h4>Buka file next.config.js </h4></li>
+<li><h3>3. Tambahkan Script di package.json</h3></li>
 
 ![images](images/Kode1.2.png)
 
