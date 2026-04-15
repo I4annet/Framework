@@ -98,6 +98,26 @@ Praktikum 6 – Testing dengan getByTestId
 
 ![images](images/Hasil6.1.png)
 
+Praktikum 7 – Testing Page dengan Router (Mocking)
+---
+<h3>Kita coba untuk melakukan testing pada halaman produk </h3>
+<li><h3>Buat file product.spec.tsx </h3></li>
+
+![images](images/Kode7.png)
+
+<li><h3>Tambahkan kode berikut</h3></li>
+
+![images](images/Kode7.1.png)
+
+<li><h3>Ketika testing halaman Product, sering muncul error: NextRouter was not mounted </h3></li>
+
+![images](images/Hasil7.png)
+
+<li><h3>Solusi: Mock Next Router
+Tambahkan di file product.spec.tsx</h3></li>
+
+![images](images/Kode7.2.png)
+
 
 ### Pertanyaan Individu
 
