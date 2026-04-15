@@ -76,8 +76,15 @@ const TampilanLogin = () => {
                         </label>
                         <input type="password" id="password" name="password" placeholder="Password" className={styles.login_form_item_input} />
                     </div>
-                    <button type="submit" className={styles.login_form_item_button} disabled={isLoading}> {/* Tampilkan "Loading..." saat proses registrasi sedang berlangsung, dan "login" saat tidak. */}
-                        {isLoading ? "Loading..." : "login"}
+                    <button type="submit" className={styles.login_form_item_button} disabled={isLoading}>
+                        {isLoading ? "Loading..." : "Login"}
+                    </button>{" "}
+                    <br /> <br />
+                    <button onClick={() => signIn("google", { callbackUrl, redirect: false})}
+                        className={styles.login_form_item_button}
+                        disabled={isLoading}
+                    >
+                        {isLoading ? "Loading..." : "Sign in with Google"}
                     </button>
                 </form>
                 <br />

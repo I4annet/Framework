@@ -76,58 +76,53 @@ berhasil maka akan terhubung dengan akun google. </h3></li>
 
 ![images](images/Hasil4.png)
 
-![images](images/Hasil4.1.png)
-
 <li><h3>Menampilkan image dari google</h3></li>
+
+![images](images/Kode4.1.png)
+
+<li><h3>Buka file navbar.module.css dan tambahkan code berikut</h3></li>
+
+![images](images/Kode4.2.png)
+
+<li><h3> Hasil: </h3></li>
+
+![images](images/Hasil4.1.png)
 
 Bagian 5 - Simpan Data Google ke Database
 ---
 
-<li><h3> Modifikasi withAuth.ts pada folder src/middleware </h3></li>
+<li><h3>Buka file servicefirebase.ts pada folder src/utils/db/ dan tambahkan beberapa
+kode beriku dan tambahkan juga code berikut </h3></li>
 
 ![images](images/Kode5.png)
 
+<li><h3>Panggil Service di JWT Callback buka file [...nextAuth].ts</h3></li>
 
-Bagian 6 - Membuat halaman Admin dan authoriz
----
+![images](images/Kode5.1.png)
 
-<li><h3> Buat halaman admin </h3></li>
+<li><h3>Jalankan browser dan login menggunakan akun google setelah cek di firebase, jika
+data akun googlenya masuk ke database maka anda telah berhasil</h3></li>
 
-![images](images/Folder6.png)
-
-<li><h3> Pada index.tsx tambahkan code berikut </h3></li>
-
-![images](images/Kode6.png)
-
-
-<li><h3> Modifikasi withAuth.ts </h3></li>
-
-![images](images/Kode6.1.png)
-
-<li><h3> Jalankan browser localhost:3000/produk dan pada status sudah login. Rubah urlnya
-menjadi http://localhost:3000/admin maka user akan diarahkan ke localhost. Pada
-intinya role selain admin tidak bisa mengakses </h3></li>
-
-![images](images/Hasil6.png)
+![images](images/Hasil5.png)
 
 ### Pertanyaan Individu
 
-1. Mengapa password harus diverifikasi dengan bcrypt.compare?
+1. Apa perbedaan login credential dan login Google?
 
-Jawaban : Karena password di database sudah di-hash, jadi tidak bisa dibandingkan langsung. bcrypt.compare digunakan untuk mencocokkan password input dengan hash secara aman.
+Jawaban : Credential memakai email & password yang disimpan sendiri di database. Sedangkan Google memakai akun Google (OAuth), tanpa perlu simpan password di sistem kita.
 
-2. Mengapa role disimpan di token?
+2. Mengapa data Google tetap perlu disimpan ke database?
 
-Jawaban : Agar server bisa mengetahui hak akses user tanpa perlu query database berulang kali (lebih efisien dan cepat).
+Jawaban : Agar aplikasi punya data user sendiri (role, profil, histori, dll) yang tidak disediakan penuh oleh Google.
 
-3. Apa fungsi callbackUrl?
+3. Apa fungsi JWT callback?
 
-Jawaban : Untuk menentukan halaman tujuan setelah login/logout (redirect user ke halaman yang diinginkan).
+Jawaban : Untuk menyimpan dan mengatur data penting (seperti email, role) ke dalam token agar bisa digunakan di seluruh aplikasi tanpa query ulang ke database.
 
-4. Mengapa middleware penting untuk security?
+4. Mengapa perlu multi-role?
 
-Jawaban : Middleware berfungsi sebagai penjaga awal untuk memvalidasi request (cek login, token, role) sebelum user mengakses halaman tertentu.
+Jawaban : Untuk membedakan hak akses user (misalnya admin, user) sehingga tiap user hanya bisa mengakses fitur sesuai perannya.
 
-5. Apa risiko jika role tidak dicek di middleware?
+5. Apa risiko jika tidak menyimpan user ke database?
 
-Jawaban : User bisa mengakses halaman atau fitur yang bukan haknya (misalnya user biasa masuk ke halaman admin).
+Jawaban : Tidak bisa mengatur role, menyimpan data tambahan, atau mengelola user (semua bergantung ke provider seperti Google).

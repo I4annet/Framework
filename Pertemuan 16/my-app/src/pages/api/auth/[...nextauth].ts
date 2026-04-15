@@ -1,7 +1,7 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
-import { signInUser } from "../../../utils/db/servicefirebase";
+import { signInUser, signInWithGoogle } from "../../../utils/db/servicefirebase";
 import bcrypt from "bcrypt";
 import { signIn } from "next-auth/react";
 
@@ -53,22 +53,35 @@ export const authOptions: NextAuthOptions = {
                 token.role = user.role;
             }
 
-            if (account?.provider === "google" && user) {
-                token.fullname = user.name;
-                token.email = user.email;
-                token.image = user.image;
-                token.type = account.provider;
-            }
+            if (account?.provider === "google"){
+                const data = {
+                fullname: user.name,
+                email: user.email,
+                image: user.image,
+                type: account.provider,
+            };
+        
 
+        await signInWithGoogle(data, (result: any) => {
+            if (result.status) {
+                token.fullname = result.data.fullname;
+                token.email = result.data.email;
+                token.image = result.data.image;
+                token.role = result.data.role;
+                token.type = result.data.type;
+            }
+        });
+    }
             return token;
         },
+        
 
         async session({ session, token }: any) {
             if (token.email) {
                 session.user.email = token.email;
             }
             if (token.fullname) {
-                session.user.name = token.fullname;
+                session.user.fullname = token.fullname;
             }
             if (token.image) {
                 session.user.image = token.image;

@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs, doc, getDoc, query,addDoc, where } from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, query,addDoc, where, updateDoc, } from "firebase/firestore";
 import app from "./firebase";
 import bcrypt from "bcrypt";
 
@@ -64,5 +64,39 @@ export async function signUp(
                     message: "Error occurred while registering user",
                 });
             });
+    }
+}
+
+export async function signInWithGoogle(userData: any, callback: any) {
+    try {
+        const q = query(
+            collection(db, "users"),
+            where("email", "==", userData.email),
+        );
+        const querySnapshot = await getDocs(q);
+        const data = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as any));
+        
+        if (data.length > 0) {
+            userData.role = data[0].role;
+            await updateDoc(doc(db, "users", data[0].id), userData);
+            callback({
+                status: "success",
+                message: "User signed in successfully",
+                data: userData,
+            });
+        } else {
+            userData.role = "member";
+            await addDoc(collection(db, "users"), userData);
+            callback({
+                status: "success",
+                message: "User signed up successfully",
+                data: userData,
+            });
+        }
+    } catch (error: any) {
+        callback({
+            status: "error",
+            message: "Failed to sign in with Google",
+        });
     }
 }
