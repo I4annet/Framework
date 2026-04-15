@@ -146,22 +146,22 @@ o Perbaiki di komponen: Pada file index.tsx pada folder pages/produk</h3></li>
 
 ### Pertanyaan Individu
 
-1. Mengapa <img> biasa tidak optimal?
+1. Mengapa unit testing penting sebelum production?
 
-Jawaban : Karena tidak ada optimasi otomatis (lazy loading, resize, format modern). Bisa bikin loading lambat dibanding komponen seperti next/image.
+Jawaban : Untuk memastikan setiap fungsi berjalan benar, mencegah bug, dan menjaga kualitas kode sebelum digunakan user.
 
-2. Apa perbedaan font CDN dan next/font?
+2. Mengapa branch coverage sulit mencapai 100%?
 
-Jawaban : CDN mengambil dari server luar sedangkan next/font berada di host lokal membuat lebih cepat & konsisten (tanpa request eksternal)
+Jawaban : Karena harus menguji semua kemungkinan kondisi (if/else, edge case), termasuk skenario yang jarang atau sulit direplikasi.
 
-3. Mengapa script bisa membuat website lambat?
+3. Apa itu mocking?
 
-Jawaban : Karena script bisa memblokir rendering (blocking), menambah beban JavaScript, dan memperlambat waktu load halaman.
+Jawaban : Teknik untuk mengganti dependensi (API, database, dll) dengan versi tiruan agar testing fokus pada unit tertentu.
 
-4. Kapan harus menggunakan dynamic import?
+4. Kapan snapshot test digunakan?
 
-Jawaban : Saat komponen tidak perlu dimuat di awal (misalnya modal, chart, atau fitur berat) agar load awal lebih ringan.
+Jawaban : Saat ingin memastikan tampilan UI tidak berubah secara tidak sengaja dari versi sebelumnya.
 
-5. Apa dampak bundle size terhadap UX?
+5. Apakah semua file harus dites?
 
-Jawaban : Semakin besar bundle membuat loading semakin lebih lama dan membuat UX buruk (lambat, tidak responsif).
+Jawaban : Tidak. Fokus pada bagian penting seperti logic utama, fungsi kritis, dan komponen yang sering digunakan.
