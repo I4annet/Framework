@@ -5,46 +5,22 @@ exports[`About Page renders about page correctly 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="about"
-      >
+      <div>
         <h1
-          class="about__title"
+          data-testid="title"
         >
-          Halaman About
+          About Page
         </h1>
-        <p
-          class="about__description"
-        >
-          Ini adalah halaman about yang berisi informasi tentang aplikasi ini.
-        </p>
-        <a
-          href="/"
-        >
-          Kembali ke Halaman Home
-        </a>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="about"
-    >
+    <div>
       <h1
-        class="about__title"
+        data-testid="title"
       >
-        Halaman About
+        About Page
       </h1>
-      <p
-        class="about__description"
-      >
-        Ini adalah halaman about yang berisi informasi tentang aplikasi ini.
-      </p>
-      <a
-        href="/"
-      >
-        Kembali ke Halaman Home
-      </a>
     </div>
   </div>,
   "debug": [Function],

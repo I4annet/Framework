@@ -78,17 +78,25 @@ Praktikum 5 – Konfigurasi Coverage Lengkap
 Praktikum 6 – Testing dengan getByTestId
 ---
 
-<li><h3>Tambahkan pada About Page <h1 data-testid="title">About Page</h1></h3></li>
+<li><h3>Tambahkan pada About Page </h3></li>
 
-![images](images/Kode5.png)
+![images](images/Kode6.png)
 
 <li><h3> Update Testing pada about.spec.tsx </h3></li>
 
-![images](images/Hasil5.png)
+![images](images/Kode6.1.png)
 
 <li><h3> Dicoba untuk di run </h3></li>
 
-![images](images/Hasil5.2.png)
+![images](images/Hasil6.png)
+
+<li><h3>Coba Jika dibuat Salah: Rubah menjadi toBe("About")</h3></li>
+
+![images](images/Kode6.2.png)
+
+<li><h3>Jalan kan dan Hasil: FAIL Expected: "About",Received: "About Page"</h3></li>
+
+![images](images/Hasil6.1.png)
 
 
 ### Pertanyaan Individu

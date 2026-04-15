@@ -1,12 +1,12 @@
 import TampilanAbout from '@/view/about'
 // import styles from '@/styles/Home.module.css'
 
-const halamanAbout = () => {
+const AboutPage = () => {
     return (
-        <>
-        <TampilanAbout />
-        </>
+        <div>
+            <h1 data-testid="title">About Page</h1>
+        </div>
     );
 }
 
-export default halamanAbout;
+export default AboutPage;
