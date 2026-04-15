@@ -118,6 +118,31 @@ Tambahkan di file product.spec.tsx</h3></li>
 
 ![images](images/Kode7.2.png)
 
+Praktikum 8 – Menangani Undefined Data
+---
+<li><h3>Jalankan npm run test:coverage maka akan muncul error </h3></li>
+
+![images](images/Hasil8.png)
+
+<li><h3>• Jika muncul error:
+o Cannot read properties of undefined
+o Perbaiki di komponen: Pada file index.tsx pada folder pages/produk</h3></li>
+
+![images](images/Kode8.png)
+
+<li><h3>Jalankan npm run test:coverage maka akan muncul error </h3></li>
+
+![images](images/Hasil8.1.png)
+
+<li><h3>Maka Solusinya perbaiki code pada file</h3></li>
+
+![images](images/Kode8.1.png)
+![images](images/Kode8.2.png)
+
+
+<li><h3>Analisis Coverage</h3></li>
+
+![images](images/Hasil8.2.png)
 
 ### Pertanyaan Individu
 
