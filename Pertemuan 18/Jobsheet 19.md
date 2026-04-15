@@ -46,16 +46,19 @@ Praktikum 3 - Testing Halaman About
 
 ![images](images/Hasil3.png)
 
-Praktikum 4 - Optimasi Avatar dengan next/image
+Praktikum 4 – Coverage Report
 ---
 
-<li><h3>Buka file index.tsx pada folder layouts/navbar dan modifikasi :</h3></li>
+<li><h3>Jalankan: npm run test:coverage</h3></li>
+
+![images](images/Hasil4.png)
+
+<li><h3> Akan muncul folder dan Buka:
+▪ coverage/lcov-report/index.html ( buka di melalui explorer) </h3></li>
+Minimum 80% coverage
 
 ![images](images/Kode4.png)
-
-<li><h3> Tambahkan hostname Google: </h3></li>
-
-![images](images/Kode4.1.png)
+![images](images/Hasil4.1.png)
 
 
 ### Pertanyaan Individu
