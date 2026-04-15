@@ -29,13 +29,22 @@ Praktikum 2 - Struktur Folder Testing
 
 ![images](images/Kode2.png)
 
-Praktikum 3 - Script Optimization
+Praktikum 3 - Testing Halaman About
 ---
 
-<li><h3>Menggunakan next/script </li> 
-<li><h4>Buka file index.tsx pada folder layouts/Navbar dan modifikasi </h4></li>
+<li><h3>Buat File Testing </li> 
+<li><h4>src/__test__/pages/about.spec.tsx </h4></li>
 
 ![images](images/Kode3.png)
+
+<li><h3> Contoh Testing Snapshot. Pada about.spec.tsx tambahkan code berikut :</h3></li>
+
+![images](images/Kode3.1.png)
+
+<li><h3>Jalan Testing </li> 
+<li><h4>npm run test, jika berhasil PASS about.spec.tsx</h4></li>
+
+![images](images/Hasil3.png)
 
 Praktikum 4 - Optimasi Avatar dengan next/image
 ---
