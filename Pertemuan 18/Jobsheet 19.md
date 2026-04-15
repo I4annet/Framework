@@ -60,6 +60,36 @@ Minimum 80% coverage
 ![images](images/Kode4.png)
 ![images](images/Hasil4.1.png)
 
+Praktikum 5 – Konfigurasi Coverage Lengkap
+---
+
+<li><h3>Update jest.config.mjs:</h3></li>
+
+![images](images/Kode5.png)
+
+<li><h3> Jalankan npm run test:coverage </h3></li>
+
+![images](images/Hasil5.png)
+
+<li><h3> Jika dilihat di index.htmlnya </h3></li>
+
+![images](images/Hasil5.2.png)
+
+Praktikum 6 – Testing dengan getByTestId
+---
+
+<li><h3>Tambahkan pada About Page <h1 data-testid="title">About Page</h1></h3></li>
+
+![images](images/Kode5.png)
+
+<li><h3> Update Testing pada about.spec.tsx </h3></li>
+
+![images](images/Hasil5.png)
+
+<li><h3> Dicoba untuk di run </h3></li>
+
+![images](images/Hasil5.2.png)
+
 
 ### Pertanyaan Individu
 
