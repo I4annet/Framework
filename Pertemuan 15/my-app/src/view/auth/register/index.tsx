@@ -49,10 +49,10 @@ const TampilanRegister = () => {
                         <input type="email" id="email" name="email" placeholder="Email" className={styles.register_form_item_input} />
                     </div>
                     <div className={styles.register_form_item}>
-                        <label htmlFor="Fullname" className={styles.register_form_item_label}>
+                        <label htmlFor="fullname" className={styles.register_form_item_label}>
                             Full Name
                         </label>
-                        <input type="text" id="Fullname" name="Fullname" placeholder="Full Name" className={styles.register_form_item_input} />
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" className={styles.register_form_item_input} />
                     </div>
                     <div className={styles.register_form_item}>
                         <label htmlFor="password" className={styles.register_form_item_label}>

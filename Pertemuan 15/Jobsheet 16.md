@@ -59,71 +59,47 @@ Bagian 2 - Handle Login di Frontend
 
 ![images](images/Kode2.6.png)
 
-Bagian 3 - Install bcrypt
+Bagian 3 - Authorize di NextAuth (Database Login)
 ---
 
-<li><h3>npm install bcrypt --force </li> 
+<li><h3>Buka file [...nextauth].ts modifikasi menjadi berikut ( pada bagian providers ) </li> 
 
 ![images](images/Kode3.png)
 
-<li><h3>npm install --save-dev @types/bcrypt –force</li> 
 
-![images](images/Kode3.1.png)
+Bagian 4 - Tambahkan Role ke Token
+---
 
+<li><h3>JWT Callback pada file [...nextauth].ts Modifikasi menjadi </h3></li>
 
-<li><h3>Buka file servicefirebase.ts pada folder src/utils/db dan modifikasi</li> 
+[images](images/Kode4.png)
 
-![images](images/Kode3.2.png)
+<li><h3> Jalankan browser http://localhost:3000/auth/login </h3></li>
 
-<li><h3>Jalankan browser http://localhost:3000/auth/register dan input data setelah itu klik
-register</li> 
+[images](images/Hasil4.png)
 
-![images](images/Kode3.3.png)
-
-<li><h3>Buka pada firebase jika berhasil maka data register akan masuk</li> 
-
-![images](images/Hasil3.png)
-
-<li><h3>Jika user memasukkan data yang sama sistem tidak akan memproses tetapi
-permasalahannya user memasukkan data yang sama tidak ada pemberitahuan pada
-layar maka dari itu perlu ada perubahan pada code index.tsx pada folder
-views/auth/register</li> 
-
-![images](images/Kode3.4.png)
-
-<li></h3>Modifikasi juga pada register.module.scss</h3></li>
-
-![images](images/Kode3.7.png)
-
-<li><h3>Jika berhasil maka hasilnya seperti berikut</h3></li>
-
-![images](images/Hasil3.1.png)
+[images](images/Hasil4.1.png)
 
 
-
-<li><h3>Tambakan loading dengan menambahkan kode pada index.tsx</h3></li>
-
-[images](images/Hasil3.8.png)
 
 ### Pertanyaan Individu
 
-1. Mengapa password harus di-hash? 
+1. Mengapa password harus diverifikasi dengan bcrypt.compare?
 
-Jawaban : Agar tidak disimpan dalam bentuk asli (plain text), sehingga lebih aman jika database bocor.
+Jawaban : Karena password di database sudah di-hash, jadi tidak bisa dibandingkan langsung. bcrypt.compare digunakan untuk mencocokkan password input dengan hash secara aman.
 
-2. Apa perbedaan addDoc dan setDoc? 
+2. Mengapa role disimpan di token?
 
-Jawaban : addDoc: ID dibuat otomatis oleh Firebase setDoc: ID ditentukan sendiri
+Jawaban : Agar server bisa mengetahui hak akses user tanpa perlu query database berulang kali (lebih efisien dan cepat).
 
-3. Mengapa perlu validasi method POST? 
+3. Apa fungsi callbackUrl?
 
-Jawaban : Untuk memastikan endpoint hanya menerima request yang sesuai (mencegah akses tidak sah seperti GET/PUT).
+Jawaban : Untuk menentukan halaman tujuan setelah login/logout (redirect user ke halaman yang diinginkan).
 
-4. Apa risiko jika email tidak dicek unik? 
+4. Mengapa middleware penting untuk security?
 
-Jawaban : Risiko jika email tidak unik
-Bisa terjadi duplikasi akun, membingungkan sistem login, dan berpotensi disalahgunakan.
+Jawaban : Middleware berfungsi sebagai penjaga awal untuk memvalidasi request (cek login, token, role) sebelum user mengakses halaman tertentu.
 
-5. Apa fungsi role pada user?
+5. Apa risiko jika role tidak dicek di middleware?
 
-Jawaban : Untuk mengatur hak akses (misalnya admin atau user biasa).
+Jawaban : User bisa mengakses halaman atau fitur yang bukan haknya (misalnya user biasa masuk ke halaman admin).

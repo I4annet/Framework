@@ -13,6 +13,7 @@ const TampilanLogin = () => {
     const handleSubmit = async (event: any) => {
         setError("");
         setIsLoading(true);
+        event.preventDefault();
         // event.preventDefault();
         // const form = event.currentTarget;
         // const formData = new FormData(event.currentTarget);
@@ -45,12 +46,12 @@ const TampilanLogin = () => {
             callbackUrl,
           });
           
-          if (res?.error) {
+          if (!res?.error) {
             setIsLoading(false);
             push(callbackUrl);
           } else {
             setIsLoading(false);
-            setError(res?.error || "Login failed");
+            setError("Login failed");
           }
         } catch (error) {
           setIsLoading(false);
