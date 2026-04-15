@@ -50,58 +50,29 @@ Praktikum 4 - Optimasi Avatar dengan next/image
 
 ![images](images/Kode4.png)
 
-<li><h3> Jalankan browser localhost:3000/auth/login masuk melalui sign in with google.Jika
-berhasil maka akan terhubung dengan akun google. </h3></li>
-
-![images](images/Hasil4.png)
-
-<li><h3>Menampilkan image dari google</h3></li>
+<li><h3> Tambahkan hostname Google: </h3></li>
 
 ![images](images/Kode4.1.png)
 
-<li><h3>Buka file navbar.module.css dan tambahkan code berikut</h3></li>
-
-![images](images/Kode4.2.png)
-
-<li><h3> Hasil: </h3></li>
-
-![images](images/Hasil4.1.png)
-
-Bagian 5 - Simpan Data Google ke Database
----
-
-<li><h3>Buka file servicefirebase.ts pada folder src/utils/db/ dan tambahkan beberapa
-kode beriku dan tambahkan juga code berikut </h3></li>
-
-![images](images/Kode5.png)
-
-<li><h3>Panggil Service di JWT Callback buka file [...nextAuth].ts</h3></li>
-
-![images](images/Kode5.1.png)
-
-<li><h3>Jalankan browser dan login menggunakan akun google setelah cek di firebase, jika
-data akun googlenya masuk ke database maka anda telah berhasil</h3></li>
-
-![images](images/Hasil5.png)
 
 ### Pertanyaan Individu
 
-1. Apa perbedaan login credential dan login Google?
+1. Mengapa <img> biasa tidak optimal?
 
-Jawaban : Credential memakai email & password yang disimpan sendiri di database. Sedangkan Google memakai akun Google (OAuth), tanpa perlu simpan password di sistem kita.
+Jawaban : Karena tidak ada optimasi otomatis (lazy loading, resize, format modern). Bisa bikin loading lambat dibanding komponen seperti next/image.
 
-2. Mengapa data Google tetap perlu disimpan ke database?
+2. Apa perbedaan font CDN dan next/font?
 
-Jawaban : Agar aplikasi punya data user sendiri (role, profil, histori, dll) yang tidak disediakan penuh oleh Google.
+Jawaban : CDN mengambil dari server luar sedangkan next/font berada di host lokal membuat lebih cepat & konsisten (tanpa request eksternal)
 
-3. Apa fungsi JWT callback?
+3. Mengapa script bisa membuat website lambat?
 
-Jawaban : Untuk menyimpan dan mengatur data penting (seperti email, role) ke dalam token agar bisa digunakan di seluruh aplikasi tanpa query ulang ke database.
+Jawaban : Karena script bisa memblokir rendering (blocking), menambah beban JavaScript, dan memperlambat waktu load halaman.
 
-4. Mengapa perlu multi-role?
+4. Kapan harus menggunakan dynamic import?
 
-Jawaban : Untuk membedakan hak akses user (misalnya admin, user) sehingga tiap user hanya bisa mengakses fitur sesuai perannya.
+Jawaban : Saat komponen tidak perlu dimuat di awal (misalnya modal, chart, atau fitur berat) agar load awal lebih ringan.
 
-5. Apa risiko jika tidak menyimpan user ke database?
+5. Apa dampak bundle size terhadap UX?
 
-Jawaban : Tidak bisa mengatur role, menyimpan data tambahan, atau mengelola user (semua bergantung ke provider seperti Google).
+Jawaban : Semakin besar bundle membuat loading semakin lebih lama dan membuat UX buruk (lambat, tidak responsif).
