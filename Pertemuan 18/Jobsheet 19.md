@@ -22,19 +22,12 @@ o jest.config.mjs dan modifikasi </h4></li>
 
 ![images](images/Kode1.2.png)
 
-Praktikum 2 - Font Optimization
+Praktikum 2 - Struktur Folder Testing
 ---
 
-<li><h3>A. Menggunakan next/font</h3></li>
-<li><h4>Buka file index.tsx pada folder Appshell/index.tsx dan modifkasi </h4></li>
+<li><h3>Buat folder: src/_test_/</h3></li>
 
 ![images](images/Kode2.png)
-
-<li><h4>Jalankan browser localhost:3000/produk maka font akan berubah menjadi roboto
-untuk mengecek fontnya bisa menggunakan extension FontFinderi </h4></li>
-
-![images](images/Hasil2.png)
-
 
 Praktikum 3 - Script Optimization
 ---
